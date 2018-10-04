@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "VenturaEdding";
+    src: url("../assets/webfonts/ventura/VenturaEdding-Bold.eot");
+    src: url("../assets/webfonts/ventura/VenturaEdding-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../assets/webfonts/ventura/VenturaEdding-Bold.woff") format("woff"),
+         url("../assets/webfonts/ventura/VenturaEdding-Bold.ttf")  format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FaktProSoft";
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Blond.eot");
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Blond.eot?#iefix") format("embedded-opentype"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Blond.woff") format("woff"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Blond.ttf")  format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FaktProSoft";
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Normal.eot");
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Normal.eot?#iefix") format("embedded-opentype"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Normal.woff") format("woff"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Normal.ttf")  format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FaktProSoft";
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Medium.eot");
+    src: url("../assets/webfonts/fakt-soft/FaktSoftPro-Medium.eot?#iefix") format("embedded-opentype"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Medium.woff") format("woff"),
+         url("../assets/webfonts/fakt-soft/FaktSoftPro-Medium.ttf")  format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../webfonts/averta/Averta-Regular.eot");
+  src: url("../webfonts/averta/Averta-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Regular.woff") format("woff"), url("../fonts/Averta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../webfonts/averta/Averta-Light.eot");
+  src: url("../webfonts/averta/Averta-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Light.woff") format("woff"), url("../fonts/Averta-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../webfonts/averta/Averta-Semibold.eot");
+  src: url("../webfonts/averta/Averta-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Semibold.woff") format("woff"), url("../fonts/Averta-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../webfonts/averta/Averta-Black.eot");
+  src: url("../webfonts/averta/Averta-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Black.woff") format("woff"), url("../fonts/Averta-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../webfonts/averta/Averta-Bold.eot");
+  src: url("../webfonts/averta/Averta-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Bold.woff") format("woff"), url("../fonts/Averta-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
