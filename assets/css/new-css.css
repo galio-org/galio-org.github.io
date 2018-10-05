@@ -226,7 +226,7 @@ a[rel="tooltip"]{
   position: absolute;
   z-index: 2;
   width: 40%;
-  top: 100%;
+  top: 106%;
   left: 50%;
   transform: translate(-50%);
 
@@ -447,15 +447,10 @@ a[rel="tooltip"]{
   font-size: 16px;
   padding-bottom: 15px;
 }
-.section-map{
-  overflow: hidden;
-}
-.section-map .info .description{
-  padding-left: 5px;
-}
+
 
 .section-expo{
-  background: #231b1b;
+  background: linear-gradient(to bottom, #141d22 0%, #0a0b0d 100%);
 }
 
 .section-expo .title{
@@ -473,13 +468,25 @@ a[rel="tooltip"]{
 .section-expo .form-control:focus
 {
   color: #fff;
-  background: #1e1616;
+  background: #212831;
   border-radius: 2px;
-  border-color: #342f2e;
+  border-color: rgba(255,255,255,0.1);
+}
+
+.section-expo img{
+  position: absolute;
+  top: 0;
+  width: 40%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .section-expo .btn{
   padding: 0 35px;
+}
+
+.section-who img{
+  width: 95%;
 }
 .info .icon.icon-circle {
   max-width: 80px;
@@ -603,15 +610,7 @@ a[rel="tooltip"]{
 .image-container img{
 
 }
-.section-map .image-container{
-  height: 560px;
-}
-.section-map .image-container .map{
-  position: absolute;
-  width: 850px;
-  left: 30px;
-  right: auto;
-}
+
 .icon{
   margin: 10px;
   margin-top: 6px;
@@ -675,6 +674,10 @@ a[rel="tooltip"]{
 }
 .section-road{
   padding-top: 130px;
+  background: url("../img/map.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .section-road h3{
   color: white;
@@ -860,11 +863,6 @@ a[rel="tooltip"]{
   top: 10%;
 }
 
-
-.section-map{
-  padding-top: 0;
-  background: #2b2b2b;
-}
 .grey-section{
   background: #d3d3d3;
   width: 190px;
@@ -887,17 +885,6 @@ a[rel="tooltip"]{
   .section-how .col-md-4:last-child .btn{
     margin-top: 114px;
   }
-}
-
-@media (max-width: 767px){
-
-
-  .section-map .image-container .map {
-    max-width: 110%;
-    left: -15px;
-    right: auto;
-  }
-
 }
 
 @media (min-width: 992px){
@@ -1001,6 +988,9 @@ a[rel="tooltip"]{
     margin-bottom: 400px;
   }
 
+  .section-categories img{
+    top: 95%;
+  }
   .section-header h1.title{
     font-size: 30px;
   }
@@ -1019,6 +1009,14 @@ a[rel="tooltip"]{
 
   .section-technologies .row img{
     width: 90%;
+  }
+
+  .footer{
+    text-align: center;
+  }
+
+  .footer .container .copyright{
+    margin: 15px 0;
   }
 }
 
@@ -1053,21 +1051,41 @@ a[rel="tooltip"]{
   color: #b9b9b9 !important;
 }
 
+.footer{
+  padding: 20px 0 15px;
+  margin-top: 50px;
+}
+
 .footer.footer-black{
-  background: #2b2b2b;
+  background: #080c0f;
 }
 
 .footer-black .copyright a{
   color: #FFF;
 }
 
+.footer p{
+  display: inline;
+  font-size: 14px;
+}
+
+.footer p .fa{
+  margin: 0 5px;
+  color: #fff;
+}
 .space-180{
   display: block;
   height: 180px;
 }
 
+.footer .social{
+  margin-left: 15px !important;
+}
+
 .footer .copyright{
-  font-size: 16px;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-with-icons .logo{
