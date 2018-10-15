@@ -225,6 +225,7 @@ a[rel="tooltip"]{
 .section-categories img{
   position: absolute;
   z-index: 2;
+  max-width: 500px;
   width: 40%;
   top: 106%;
   left: 50%;
@@ -488,6 +489,45 @@ a[rel="tooltip"]{
 .section-who img{
   width: 95%;
 }
+
+.section-hacktoberfest{
+  background: #57273e;
+}
+
+.section-hacktoberfest .desc,
+.section-hacktoberfest .title{
+  color: #fff;
+}
+
+.section-hacktoberfest .btn{
+  background: #00fffe;
+  border-color: #00fffe;
+  color: #000;
+  opacity: 1;
+}
+
+.section-hacktoberfest img{
+  width: 100%;
+}
+
+.section-hacktoberfest .img-bottom{
+  width: 14%;
+  position: absolute;
+  right: 5%;
+  bottom: -15%;
+}
+
+.section-hacktoberfest .img-top{
+  position: absolute;
+  width: 25%;
+  left: 5%;
+  top: -55px;
+}
+
+.section-hacktoberfest .desc{
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
 .info .icon.icon-circle {
   max-width: 80px;
   width: 80px;
@@ -572,14 +612,14 @@ a[rel="tooltip"]{
 }
 
 .section-header img.phone1{
-  right: 28%;
-  width: 115%;
+  right: 33%;
+  width: 110%;
   margin-top: 100px;
   z-index: 2;
 }
 
 .section-header img.phone2{
-  width: 55%;
+  width: 60%;
   right: -15px;
   margin-top: -35px;
 }
@@ -734,6 +774,7 @@ a[rel="tooltip"]{
 }
 .section-road .step{
   padding: 0 10px;
+  height: 420px;
 }
 
 .section-road .step .line{
@@ -969,6 +1010,16 @@ a[rel="tooltip"]{
   .section-header .card-featured-content img{
     margin-right: 45px;
   }
+
+  .section-hacktoberfest .img-top,
+  .section-hacktoberfest .img-bottom{
+    display: none;
+  }
+
+  .section-hacktoberfest img{
+    width: 25%;
+  }
+
 }
 
 @media(max-width: 768px){
@@ -1018,6 +1069,15 @@ a[rel="tooltip"]{
   .footer .container .copyright{
     margin: 15px 0;
   }
+
+  .section-road .step{
+    height: auto;
+  }
+
+  .section-hacktoberfest img{
+    width: 40%;
+  }
+
 }
 
 
@@ -1053,7 +1113,6 @@ a[rel="tooltip"]{
 
 .footer{
   padding: 20px 0 15px;
-  margin-top: 50px;
 }
 
 .footer.footer-black{
