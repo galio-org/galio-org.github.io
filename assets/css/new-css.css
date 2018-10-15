@@ -1278,6 +1278,11 @@ a[rel="tooltip"]{
 .section-road .desc{
   margin-bottom: 0;
 }
+
+.section-header .card-featured-content img{
+  width: 85px !important;
+  margin-right: 25px !important;
+}
 }
 
 .text-white{
