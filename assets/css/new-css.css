@@ -1113,6 +1113,7 @@ a[rel="tooltip"]{
 
 .footer{
   padding: 20px 0 15px;
+  margin-top: -2px;
 }
 
 .footer.footer-black{
