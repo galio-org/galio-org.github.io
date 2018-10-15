@@ -173,7 +173,7 @@ a[rel="tooltip"]{
 }
 
 .section-header .card-featured-content{
-  margin-top: 300px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -231,6 +231,31 @@ a[rel="tooltip"]{
   left: 50%;
   transform: translate(-50%);
 
+}
+
+.section-categories .text-left,
+.section-categories .text-right{
+  position: absolute;
+  font-size: 55px;
+  width: 25%;
+  line-height: 1;
+  font-weight: 100;
+}
+
+.section-categories .text-left span,
+.section-categories .text-right span{
+  font-size: 40px;
+}
+
+.section-categories .text-left{
+  top: 140%;
+  left: 10%;
+  color: #080c0f;
+}
+
+.section-categories .text-right{
+  right: 10%;
+  top: 140%;
 }
 
 .section-how .col-md-4:last-child .btn{
@@ -483,7 +508,14 @@ a[rel="tooltip"]{
 }
 
 .section-expo .btn{
-  padding: 0 35px;
+  padding: 0 25px;
+}
+
+.section-expo .img-expo{
+  width: 15%;
+  position:relative;
+  z-index:2;
+  margin: 20px 0 10px;
 }
 
 .section-who img{
@@ -640,9 +672,7 @@ a[rel="tooltip"]{
 }
 
 .red-shadow{
-  box-shadow: 1px 4px 17px 6px rgba(251, 74, 74, 0.05);
   border-radius: 10px;
-  width: 89%;
 }
 .image-container{
   position: relative;
@@ -706,6 +736,11 @@ a[rel="tooltip"]{
 }
 .section-numbers .desc{
   margin-top: 40px;
+}
+
+.section-startup .info img,
+.section-startup .info .btn{
+  width: 80%;
 }
 .section-hackathons img{
   width: 100%;
@@ -904,12 +939,6 @@ a[rel="tooltip"]{
   top: 10%;
 }
 
-.grey-section{
-  background: #d3d3d3;
-  width: 190px;
-  padding: 5px 5px 0px 10px;
-}
-
 @media (max-width: 1200px){
   .section-header h1.title{
     font-size: 40px;
@@ -917,6 +946,7 @@ a[rel="tooltip"]{
 
   .red-shadow{
     box-shadow: none;
+    width: 100%;
   }
 
   .section-header img.phone2{
@@ -926,6 +956,12 @@ a[rel="tooltip"]{
   .section-how .col-md-4:last-child .btn{
     margin-top: 114px;
   }
+
+  .section-categories .text-right,
+  .section-categories .text-left {
+    top: 125%;
+
+}
 }
 
 @media (min-width: 992px){
@@ -936,6 +972,8 @@ a[rel="tooltip"]{
   .section-header .card-featured-content img{
     margin: 100px 60px 20px 0px;
   }
+
+
 }
 
 @media (max-width: 991px){
@@ -1020,6 +1058,18 @@ a[rel="tooltip"]{
     width: 25%;
   }
 
+  .section-categories .text-right,
+  .section-categories .text-left {
+    top: 115%;
+    font-size: 40px;
+
+  }
+
+  .section-categories .text-right span,
+  .section-categories .text-left span{
+    font-size: 28px;
+  }
+
 }
 
 @media(max-width: 768px){
@@ -1042,6 +1092,7 @@ a[rel="tooltip"]{
   .section-categories img{
     top: 95%;
   }
+
   .section-header h1.title{
     font-size: 30px;
   }
@@ -1078,6 +1129,16 @@ a[rel="tooltip"]{
     width: 40%;
   }
 
+  .section-categories .text-right, .section-categories .text-left {
+    top: 110%;
+    font-size: 30px;
+  }
+
+  .section-categories .text-right span,
+  .section-categories .text-left span{
+    font-size: 20px;
+  }
+
 }
 
 
@@ -1098,7 +1159,57 @@ a[rel="tooltip"]{
   border-left-width: 25px;
 }
 
+.section-header .btn.btn-rose{
+  width: 100%;
+}
 
+.section-categories{
+  margin-bottom: 180px;
+}
+
+.section-categories ul.list-group .list-group-item.disabled a:after{
+  height: 8px;
+  width: 22px;
+  top: 5px;
+  right: -17px;
+  font-size: 6px;
+}
+
+.section-expo .img-expo{
+  width: 50%;
+}
+
+.section-hacktoberfest .btn{
+  width: 100%;
+}
+
+.section-categories svg{
+  margin-top: -1px;
+}
+
+.section-startup .info img,
+.section-startup .info .btn{
+  width: 100%;
+}
+
+.section-categories .text-right,
+.section-categories .text-left{
+  top: 105%;
+  font-size: 20px;
+}
+
+.section-categories .text-right span,
+.section-categories .text-left span{
+  font-size: 12px;
+}
+
+.section-categories .text-left{
+  left: 5%;
+}
+
+.section-categories .text-right{
+  right: 5%;
+}
 
 
 }
@@ -1308,6 +1419,7 @@ a[rel="tooltip"]{
   color: #fff;
   font-weight: 600;
   border-radius: 2px;
+}
 
 
 
