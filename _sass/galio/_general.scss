@@ -369,6 +369,14 @@ a[rel="tooltip"]{
 .section-startup .btn{
   padding: 0 40px;
 }
+
+.section-startup{
+  background: transparent;
+}
+
+.section-startup .info{
+  text-align: left;
+}
 .info .icon.icon-circle {
   max-width: 80px;
   width: 80px;
