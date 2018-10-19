@@ -178,6 +178,10 @@ a[rel="tooltip"]{
   margin-top: -195px;
 }
 
+.section-categories .list-group .list-group-item:hover{
+  background: transparent;
+}
+
 .section-categories svg{
   position: absolute;
   top: 100%;
@@ -1025,6 +1029,14 @@ a[rel="tooltip"]{
 .space-180{
   display: block;
   height: 180px;
+}
+
+.space-50{
+  height: 50px;
+}
+
+.space-110{
+  height: 110px;
 }
 
 .footer .social{
