@@ -52,7 +52,7 @@ $(document).ready(function(){
 
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #c04972; padding:0px; }";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #ff006c; padding:0px; }";
     document.body.appendChild(css);
   };
 
@@ -96,7 +96,7 @@ $(document).ready(function(){
      api.simulateClick();
      api.openPopup('facebook');
    },
-   template: '<i class="fa fa-facebook-f"></i>',
+   template: '<i class="fa fa-facebook"></i>',
    url: ' http://galio.io'
  });
 
