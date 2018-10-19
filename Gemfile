@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'jekyll-sitemap'
+gem 'jekyll-seo-tag'
+gem 'jemoji'
