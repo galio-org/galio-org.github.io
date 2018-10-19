@@ -96,7 +96,7 @@ $(document).ready(function(){
      api.simulateClick();
      api.openPopup('facebook');
    },
-   template: '<i class="fa fa-facebook-f"></i>',
+   template: '<i class="fa fa-facebook"></i>',
    url: ' http://galio.io'
  });
 
