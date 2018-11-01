@@ -2,6 +2,7 @@ name: Galio Framework
 description: Build better apps using React Native
 website_url: https://galio.io/
 github_url: https://github.com/galio-org/galio
+docs_url: https://galio.io/docs/#/install
 keywords: galio, mobile framework, android react native, ios react native, free mobile framework, react native, free react native, open source react native, mit license, mobile app
 twitter_handle: galio
 facebook_handle: galio
