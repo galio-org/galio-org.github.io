@@ -88,6 +88,18 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
   text-decoration: none;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
+  &.btn-simple{
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+      box-shadow: none;
+    }
+  }
 }
 .btn:hover,
 .btn:focus,
@@ -728,6 +740,12 @@ a[rel="tooltip"]{
     margin: 100px 60px 20px 0px;
   }
 
+  .section-informations{
+    .info{
+      height: 450px;
+    }
+  }
+
 
 }
 
@@ -1268,6 +1286,8 @@ a[rel="tooltip"]{
 
   .navbar{
     padding-top: 0;
+    background-color: #090c0f;
+    border-radius: 0;
   }
   img{
     position: relative;
@@ -1275,7 +1295,7 @@ a[rel="tooltip"]{
 
   .section-header{
     img{
-      margin-top: 100px;
+      margin-top: 40px;
     }
     .title{
       margin-top: 20px;
@@ -1287,5 +1307,57 @@ a[rel="tooltip"]{
   }
   .btn-rose{
     margin-top: 20px;
+  }
+
+  .buttons{
+    .btn{
+      margin: 0 10px;
+    }
+  }
+}
+
+//added for the modified index page
+
+.section-informations{
+  .info{
+    background: #fafafa;
+    text-align: left;
+    padding: 30px 15px 30px 30px;
+    border-radius: 3px;
+    h4{
+      margin-bottom: 20px;
+      i{
+        color: #eb3971;
+        margin-right: 15px;
+      }
+    }
+
+  p{
+    margin-bottom: 15px;
+  }
+  code{
+    &.lang-js{
+      background: transparent;
+      color: #333333;
+      .function{
+        color: #cd556a;
+        margin-right: -10px;
+      }
+
+      .punctuation{
+        color: #999999;
+      }
+
+      .keyword{
+        color: #3077a6;
+        margin-left: 22px;
+      }
+
+      .operator{
+        color: #a0805f;
+      }
+
+    }
+  }
   }
 }
