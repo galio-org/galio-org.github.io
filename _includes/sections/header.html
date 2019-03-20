@@ -1,4 +1,5 @@
 <div class="section section-header">
+  {% if page.brand == 'presentation-page' %}
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-left" style="z-index:2;">
@@ -43,4 +44,29 @@
       </div>
     </div>
   </div>
+  {% elsif page.brand == 'index-page' %}
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <img src="assets/img/logo.png">
+      <h1 class="title">
+        Galio
+      </h1>
+      <h4 class="desc">
+        Use the power of react native to easily give
+        life to your future mobile projects.
+      </h4>
+      <a href="https://galio.io/docs/#/install" class="btn btn-rose">
+        Get started
+      </a>
+
+      <br>
+      <div class="github-buttons">
+        <a class="github-button" href="{{ site.github_url }}" data-icon="octicon-star" data-show-count="true" aria-label="Star galio-org/galio on GitHub">Star</a>
+        <a class="github-button" href="{{ site.github_url }}/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork galio-org/galio on GitHub">Fork</a>
+      </div>
+    </div>
+
+  </div>
+
+  {% endif %}
 </div>
