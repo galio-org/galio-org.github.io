@@ -1302,7 +1302,7 @@ a[rel="tooltip"]{
     }
 
     .github-buttons{
-      margin-top: 80px;
+      margin-top: 50px;
     }
   }
   .btn-rose{
@@ -1314,6 +1314,10 @@ a[rel="tooltip"]{
       margin: 0 10px;
     }
   }
+
+  .buttons{
+    margin-top: 40px;
+  }
 }
 
 //added for the modified index page
@@ -1322,7 +1326,7 @@ a[rel="tooltip"]{
   .info{
     background: #fafafa;
     text-align: left;
-    padding: 30px 15px 30px 30px;
+    padding: 30px 20px;
     border-radius: 3px;
     h4{
       margin-bottom: 20px;
@@ -1358,6 +1362,9 @@ a[rel="tooltip"]{
       }
 
     }
+  }
+  img{
+    width: 100%;
   }
   }
 }

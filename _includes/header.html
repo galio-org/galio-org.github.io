@@ -23,21 +23,25 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="javascript:void;">
-                    Get Started
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void;">
-                     Home
-                </a>
-            </li>
+    {% if page.brand == 'index-page' %}
 
-       </ul>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="{{ site.docs_url }}" target="_blank">
+                      Get Started
+                  </a>
+              </li>
+              <li>
+                  <a href="presentation.html" target="_blank">
+                       Presentation
+                  </a>
+              </li>
 
-    </div><!-- /.navbar-collapse -->
+         </ul>
+
+      </div><!-- /.navbar-collapse -->
+
+      {% endif %}
   </div>
 </nav>
