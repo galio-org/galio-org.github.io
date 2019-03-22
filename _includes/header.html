@@ -17,9 +17,20 @@
         <span class="icon-bar bar2"></span>
         <span class="icon-bar bar3"></span>
       </button>
-      <a class="navbar-brand" href="javascript:void;">
+      <a class="navbar-brand" href="/">
         Galio
       </a>
+      {% if page.brand == 'index-page' %}
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="{{ site.docs_url }}" target="_blank">
+                Documentation
+            </a>
+        </li>
+      </ul>
+      
+      {% endif %}
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,11 +44,15 @@
                   </a>
               </li>
               <li>
-                  <a href="presentation.html" target="_blank">
+                  <a href="presentation" target="_blank">
                        Presentation
                   </a>
               </li>
-
+              <li>
+                  <a href="https://github.com/galio-org/galio" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Github repo">
+                       <i class="fa fa-github"></i>
+                  </a>
+              </li>
          </ul>
 
       </div><!-- /.navbar-collapse -->
