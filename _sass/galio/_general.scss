@@ -318,7 +318,7 @@ a[rel="tooltip"]{
 .section-expo img{
   position: absolute;
   top: 0;
-  width: 40%;
+  width: 35%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -1328,19 +1328,6 @@ a[rel="tooltip"]{
     margin-top: 40px;
   }
 
-  .footer{
-    .buttons{
-      margin-top: 0;
-      .btn{
-        &:hover,
-        &:active,
-        &:focus{
-          color: #d94a72;
-        }
-      }
-    }
-  }
-
   .gitter-chat-embed{
     z-index: 9999;
   }
@@ -1368,6 +1355,20 @@ a[rel="tooltip"]{
     }
   }
 
+}
+
+.footer{
+  .buttons{
+    margin-top: 0;
+    .btn{
+      margin: 0 10px;
+      &:hover,
+      &:active,
+      &:focus{
+        color: #d94a72;
+      }
+    }
+  }
 }
 
 //added for the modified index page

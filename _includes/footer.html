@@ -2,19 +2,6 @@
 <footer class="footer footer-black">
   <div class="container">
     <div class="row">
-      {% if page.brand == 'presentation-page' %}
-      <div class="col-sm-3">
-        <p><i class="fa fa-envelope"></i>hello@galio.io</p>
-      </div>
-      <div class="col-sm-6 text-center">
-        <div class="copyright">
-          © 2018 <a href="{{ site.website_url }}">{{ site.name }}</a>, made with love for apps.
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <p>Follow us<a href="{{ site.github_url }}" target="_blank"><i class="fa fa-github social"></i></p>
-        </div>
-        {% elsif page.brand == 'index-page' %}
         <div class="col-md-8 col-md-offset-2 text-center">
           <div class="buttons">
             <a href="https://github.com/galio-org/galio" target="_blank" class="btn btn-simple">
@@ -33,7 +20,6 @@
           </div>
         </div>
 
-        {% endif %}
       </div>
     </div>
   </footer>

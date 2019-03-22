@@ -6,15 +6,32 @@ layout: compress
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.brand == 'index-page' %}
 
   <title>{{ site.name }} - {{ site.description }}</title>
+
+  {% elsif page.brand == 'presentation-page' %}
+
+  <title>Presentation - Galio React Native Framework @ Galio </title>
+
+  {% endif %}
+
+
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
   <!-- Canonical SEO -->
+  {% if page.brand == 'index-page' %}
+
 	<link rel="canonical" href="https://galio.io">
+
+  {% elsif page.brand == 'presentation-page' %}
+
+  <link rel="canonical" href="https://galio.io/presentation">
+
+  {% endif %}
 
 	<!--  Social tags      -->
   <meta name="keywords" content="{{ site.keywords }}">
