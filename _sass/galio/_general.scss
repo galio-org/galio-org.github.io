@@ -188,6 +188,7 @@ a[rel="tooltip"]{
   color: #fff;
   margin-bottom: 650px;
   margin-top: -195px;
+  height: 200px;
 }
 
 .section-categories .list-group .list-group-item:hover{
@@ -211,7 +212,7 @@ a[rel="tooltip"]{
 }
 
 .section-categories img{
-  position: absolute;
+  position: absolute !important;
   z-index: 2;
   max-width: 500px;
   width: 40%;
@@ -240,14 +241,14 @@ a[rel="tooltip"]{
 }
 
 .section-categories .text-left{
-  top: 140%;
+  top: 190%;
   left: 10%;
   color: #080c0f;
 }
 
 .section-categories .text-right{
   right: 10%;
-  top: 140%;
+  top: 190%;
 }
 
 .card-featured-content img.small{
@@ -316,7 +317,7 @@ a[rel="tooltip"]{
 }
 
 .section-expo img{
-  position: absolute;
+  position: absolute !important;
   top: 0;
   width: 35%;
   left: 50%;
@@ -477,6 +478,7 @@ a[rel="tooltip"]{
 
 .section-header img{
   position: absolute;
+  width: 35%;
 }
 
 .section-header img.phone1{
@@ -726,7 +728,7 @@ a[rel="tooltip"]{
 
   .section-categories .text-right,
   .section-categories .text-left {
-    top: 125%;
+    top: 180%;
 
 }
 }
@@ -809,7 +811,7 @@ a[rel="tooltip"]{
 
   .section-categories .text-right,
   .section-categories .text-left {
-    top: 115%;
+    top: 170%;
     font-size: 40px;
 
   }
@@ -855,7 +857,7 @@ a[rel="tooltip"]{
   }
 
   .section-categories img{
-    width: 60%;
+    width: 40%;
   }
 
   .section-technologies .row img{
@@ -879,7 +881,7 @@ a[rel="tooltip"]{
   }
 
   .section-categories .text-right, .section-categories .text-left {
-    top: 110%;
+    top: 160%;
     font-size: 30px;
   }
 
@@ -951,7 +953,7 @@ a[rel="tooltip"]{
 
 .section-categories .text-right,
 .section-categories .text-left{
-  top: 105%;
+  top: 135%;
   font-size: 20px;
 }
 
@@ -1107,7 +1109,6 @@ a[rel="tooltip"]{
   opacity: 1;
 }
 .navbar{
-  position: absolute;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -1297,7 +1298,6 @@ a[rel="tooltip"]{
   }
 
   .section-header{
-      background: linear-gradient(to bottom, #ffc3d9 0%, white 100%);
     img{
       margin-top: 40px;
     }
@@ -1342,7 +1342,7 @@ a[rel="tooltip"]{
         color: #333333;
       }
       .icon{
-        background: #e94072;
+        background: #ff127c;
         i{
           margin-top: 9px;
         }

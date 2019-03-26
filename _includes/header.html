@@ -7,7 +7,7 @@
 </div>
 </nav> -->
 
-<nav class="navbar" role="navigation-demo">
+<nav class="navbar navbar-fixed-top" role="navigation-demo">
     <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,17 +20,6 @@
       <a class="navbar-brand" href="/">
         Galio
       </a>
-      {% if page.brand == 'index-page' %}
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-            <a href="{{ site.docs_url }}" target="_blank">
-                Documentation
-            </a>
-        </li>
-      </ul>
-      
-      {% endif %}
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,10 +33,16 @@
                   </a>
               </li>
               <li>
-                  <a href="presentation" target="_blank">
-                       Presentation
-                  </a>
+                <a href="https://galio.io/docs/#/components/block" target="_blank">
+                    Components
+                </a>
               </li>
+              <li>
+                <a href="https://github.com/galio-org/galio" target="_blank">
+                  Version 0.5.0
+                </a>
+              </li>
+
               <li>
                   <a href="https://github.com/galio-org/galio" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Github repo">
                        <i class="fa fa-github"></i>
