@@ -6,15 +6,32 @@ layout: compress
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.brand == 'index-page' %}
 
   <title>{{ site.name }} - {{ site.description }}</title>
+
+  {% elsif page.brand == 'presentation-page' %}
+
+  <title>Presentation - Galio React Native Framework @ Galio </title>
+
+  {% endif %}
+
+
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
   <!-- Canonical SEO -->
+  {% if page.brand == 'index-page' %}
+
 	<link rel="canonical" href="https://galio.io">
+
+  {% elsif page.brand == 'presentation-page' %}
+
+  <link rel="canonical" href="https://galio.io/presentation">
+
+  {% endif %}
 
 	<!--  Social tags      -->
   <meta name="keywords" content="{{ site.keywords }}">
@@ -71,11 +88,12 @@ layout: compress
   <!-- End Hotjar Tracking Code -->
 
 </head>
-<body>
+<body class="{% if page.brand == "index-page" %} index-page {% endif %}">
   <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9SQDH"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 
   {% include header.html %}
 
@@ -94,5 +112,30 @@ layout: compress
 	<script src="js/jquery.sharrre.min.js"></script>
 
   <script src="js/galio.js"></script>
+  {% if page.brand == 'index-page' %}
+
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));</script>
+      <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'galio-community/Lobby'
+      };
+      </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    {% endif %}
 </body>
 </html>

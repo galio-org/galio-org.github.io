@@ -88,6 +88,18 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
   text-decoration: none;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
+  &.btn-simple{
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+      box-shadow: none;
+    }
+  }
 }
 .btn:hover,
 .btn:focus,
@@ -176,6 +188,7 @@ a[rel="tooltip"]{
   color: #fff;
   margin-bottom: 650px;
   margin-top: -195px;
+  height: 200px;
 }
 
 .section-categories .list-group .list-group-item:hover{
@@ -199,7 +212,7 @@ a[rel="tooltip"]{
 }
 
 .section-categories img{
-  position: absolute;
+  position: absolute !important;
   z-index: 2;
   max-width: 500px;
   width: 40%;
@@ -228,14 +241,14 @@ a[rel="tooltip"]{
 }
 
 .section-categories .text-left{
-  top: 140%;
+  top: 190%;
   left: 10%;
   color: #080c0f;
 }
 
 .section-categories .text-right{
   right: 10%;
-  top: 140%;
+  top: 190%;
 }
 
 .card-featured-content img.small{
@@ -304,9 +317,9 @@ a[rel="tooltip"]{
 }
 
 .section-expo img{
-  position: absolute;
+  position: absolute !important;
   top: 0;
-  width: 40%;
+  width: 35%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -465,6 +478,7 @@ a[rel="tooltip"]{
 
 .section-header img{
   position: absolute;
+  width: 35%;
 }
 
 .section-header img.phone1{
@@ -714,7 +728,7 @@ a[rel="tooltip"]{
 
   .section-categories .text-right,
   .section-categories .text-left {
-    top: 125%;
+    top: 180%;
 
 }
 }
@@ -726,6 +740,12 @@ a[rel="tooltip"]{
 
   .section-header .card-featured-content img{
     margin: 100px 60px 20px 0px;
+  }
+
+  .section-informations{
+    .info{
+      height: 450px;
+    }
   }
 
 
@@ -791,7 +811,7 @@ a[rel="tooltip"]{
 
   .section-categories .text-right,
   .section-categories .text-left {
-    top: 115%;
+    top: 170%;
     font-size: 40px;
 
   }
@@ -837,7 +857,7 @@ a[rel="tooltip"]{
   }
 
   .section-categories img{
-    width: 60%;
+    width: 40%;
   }
 
   .section-technologies .row img{
@@ -861,7 +881,7 @@ a[rel="tooltip"]{
   }
 
   .section-categories .text-right, .section-categories .text-left {
-    top: 110%;
+    top: 160%;
     font-size: 30px;
   }
 
@@ -933,7 +953,7 @@ a[rel="tooltip"]{
 
 .section-categories .text-right,
 .section-categories .text-left{
-  top: 105%;
+  top: 135%;
   font-size: 20px;
 }
 
@@ -1022,6 +1042,9 @@ a[rel="tooltip"]{
 .footer{
   padding: 20px 0 15px;
   margin-top: -2px;
+  .buttons{
+    margin-top: 0;
+  }
 }
 
 .footer.footer-black{
@@ -1086,7 +1109,6 @@ a[rel="tooltip"]{
   opacity: 1;
 }
 .navbar{
-  position: absolute;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -1262,4 +1284,141 @@ a[rel="tooltip"]{
 .bg-dark-gray{
   background-color: #9e9e9e;
   height: 995px;
+}
+
+.index-page{
+
+  .navbar{
+    padding-top: 0;
+    background-color: #090c0f;
+    border-radius: 0;
+  }
+  img{
+    position: relative;
+  }
+
+  .section-header{
+    img{
+      margin-top: 40px;
+    }
+    .title{
+      margin-top: 20px;
+    }
+
+    .btn{
+      &:hover,
+      &:active,
+      &:focus{
+        color: #ea3e73;
+      }
+    }
+
+  }
+  .btn-rose{
+    margin-top: 20px;
+  }
+
+  .buttons{
+    .btn{
+      margin: 0 10px;
+    }
+  }
+
+  .buttons{
+    margin-top: 40px;
+  }
+
+  .gitter-chat-embed{
+    z-index: 9999;
+  }
+
+  .gitter-open-chat-button{
+    background: #FF147C;
+  }
+
+  .section-community{
+    .info{
+      a{
+        color: #333333;
+      }
+      .icon{
+        background: #ff127c;
+        i{
+          margin-top: 9px;
+        }
+      }
+    }
+
+    h2.title{
+      margin-top: 100px;
+      margin-bottom: 80px;
+    }
+  }
+
+}
+
+.footer{
+  .buttons{
+    margin-top: 0;
+    .btn{
+      margin: 0 10px;
+      &:hover,
+      &:active,
+      &:focus{
+        color: #d94a72;
+      }
+    }
+  }
+}
+
+//added for the modified index page
+
+.section-informations{
+  .info{
+    background: #fafafa;
+    text-align: left;
+    padding: 30px 20px;
+    border-radius: 3px;
+    h4{
+      margin-bottom: 20px;
+      i{
+        color: #eb3971;
+        margin-right: 15px;
+      }
+    }
+
+  p{
+    margin-bottom: 15px;
+  }
+  code{
+    &.lang-js{
+      background: transparent;
+      color: #333333;
+      .function{
+        color: #cd556a;
+        margin-right: -10px;
+      }
+
+      .punctuation{
+        color: #999999;
+      }
+
+      .keyword{
+        color: #3077a6;
+        margin-left: 22px;
+      }
+
+      .operator{
+        color: #a0805f;
+      }
+
+    }
+  }
+  img{
+    width: 100%;
+  }
+  a{
+    color: #333333;
+  }
+  }
 }

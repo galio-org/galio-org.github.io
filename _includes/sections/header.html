@@ -1,4 +1,5 @@
 <div class="section section-header">
+  {% if page.brand == 'presentation-page' %}
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-left" style="z-index:2;">
@@ -22,25 +23,45 @@
 
     <div class="card card-plain">
       <div class="card-featured-content">
-        <a href="https://www.forbes.com/" target="_blank">
-          <img src="img/who/forbes.png">
-        </a>
-        <a href="https://entrepreneur.com/" target="_blank">
-          <img src="img/who/entrepreneur.png" style="width: 150px; top: 2px; position: relative">
-        </a>
-        <a href="https://www.producthunt.com/" target="_blank">
-          <img src="img/who/product-hunt.png" style="width: 145px">
-        </a>
-        <a href="https://www.awwwards.com/" target="_blank">
-          <img src="img/who/awwwards.png" style="width: 125px">
-        </a>
-        <a href="https://www.creativebloq.com/" target="_blank">
-          <img src="img/who/creativebloq.png" style="width: 120px">
-        </a>
-        <a href="https://speckyboy.com/" target="_blank">
-          <img src="img/who/speckyboy.png">
-        </a>
+
       </div>
     </div>
   </div>
+  {% elsif page.brand == 'index-page' %}
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <img src="assets/img/logo.png">
+      <h1 class="title">
+        Galio
+      </h1>
+      <h4 class="desc">
+        Use the power of react native to easily give
+        life to your future mobile projects.
+      </h4>
+      <div class="buttons">
+        <a href="https://github.com/galio-org/galio" target="_blank" class="btn btn-simple">
+          Github
+        </a>
+        <a href="https://galio.io/docs/#/install" target="_blank" class="btn btn-simple">
+          Documentation
+        </a>
+        <a class="btn btn-simple">
+          Version 0.5.0
+        </a>
+
+      </div>
+
+      <br>
+      <div class="github-buttons">
+        <a class="github-button" href="{{ site.github_url }}" data-icon="octicon-star" data-show-count="true" aria-label="Star galio-org/galio on GitHub">Star</a>
+        <a class="github-button" href="{{ site.github_url }}/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork galio-org/galio on GitHub">Fork</a>
+        <a class="twitter-follow-button"
+          href="https://twitter.com/galioframework" data-show-count="true" data-show-screen-name="false" target="_blank">
+        Follow</a>
+      </div>
+    </div>
+
+  </div>
+
+  {% endif %}
 </div>
