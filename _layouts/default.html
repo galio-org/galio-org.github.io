@@ -8,7 +8,7 @@ layout: compress
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.brand == 'index-page' %}
 
-  <title>{{ site.name }} - {{ site.description }}</title>
+  <title>{{ site.name }} - {{ page.description }}</title>
 
   {% elsif page.brand == 'presentation-page' %}
 
@@ -23,24 +23,16 @@ layout: compress
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
   <!-- Canonical SEO -->
-  {% if page.brand == 'index-page' %}
-
-	<link rel="canonical" href="https://galio.io">
-
-  {% elsif page.brand == 'presentation-page' %}
-
-  <link rel="canonical" href="https://galio.io/presentation">
-
-  {% endif %}
+	<link rel="canonical" href="{{ page.canonical }}">
 
 	<!--  Social tags      -->
   <meta name="keywords" content="{{ page.keywords }}">
 
-	<meta name="description" content="Galio is a beautifully designed, Free and Open Source React Native Framework">
+	<meta name="description" content="{{ page.description }}">
 
 	<!-- Schema.org markup for Google+ -->
 	<meta itemprop="name" content="Galio - React Native Framework">
-	<meta itemprop="description" content="Galio is a beautifully designed, Free and Open Source React Native Framework">
+	<meta itemprop="description" content="{{ page.description }}">
 
 	<meta itemprop="image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
 
@@ -49,7 +41,7 @@ layout: compress
 	<meta name="twitter:site" content="@galioframework">
 	<meta name="twitter:title" content="Galio - React Native Framework">
 
-	<meta name="twitter:description" content="Galio is a beautifully designed, Free and Open Source React Native Framework.">
+	<meta name="twitter:description" content="{{ page.description }}">
 	<meta name="twitter:creator" content="@galioframework">
 	<meta name="twitter:image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
 
@@ -59,7 +51,7 @@ layout: compress
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://galio.io">
 	<meta property="og:image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
-	<meta property="og:description" content="Galio is a beautifully designed, Free and Open Source React Native Framework.">
+	<meta property="og:description" content="{{ page.description }}">
 	<meta property="og:site_name" content="Galio - React Native Framework">
 
 	<link rel="icon" type="image/x-icon" href="/favicon.png">

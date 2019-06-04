@@ -333,13 +333,21 @@ a[rel="tooltip"]{
   padding: 25px 0;
 }
 
+.section-apps .card{
+  min-height: 600px;
+}
+
 .section-apps .card .content{
   padding: 25px 25px 0;
 }
 .section-apps .card .footer .btn{
   margin-right: 10px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   margin-top: 20px;
+  color: #fff;
+  padding: 0 15px;
+  line-height: 40px;
+  height: 40px;
 }
 
 .section-apps .card .footer .btn i{
@@ -771,6 +779,11 @@ a[rel="tooltip"]{
   font-size: 60px;
 }
 
+@media (min-width: 1200px){
+  .section-header{
+    background-size: cover;
+  }
+}
 
 @media (max-width: 1200px){
   .section-header h1.title{
@@ -817,6 +830,10 @@ a[rel="tooltip"]{
     width: 80%;
   }
 
+  .section-apps .card .footer{
+    position: absolute;
+    bottom: 20px;
+  }
 
 
 }
