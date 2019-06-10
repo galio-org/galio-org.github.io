@@ -100,6 +100,27 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
       box-shadow: none;
     }
   }
+
+  &.btn-default{
+    border:1px solid #a0a0a0;
+    color: #a0a0a0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+      border:1px solid #a0a0a0;
+      color: #a0a0a0 !important;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-sm{
+    padding: 0 30px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
 .btn:hover,
 .btn:focus,
@@ -268,7 +289,7 @@ a[rel="tooltip"]{
 }
 
 .info .description .btn{
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .info .icon{
@@ -290,10 +311,83 @@ a[rel="tooltip"]{
   font-size: 16px;
   padding-bottom: 15px;
 }
+.section-subscribe, #mc_embed_signup form{
+  background: #131c21;
+}
+
+// mailchimp
+
+#mc_embed_signup input.email{
+  width: 100% !important;
+}
+
+#mc_embed_signup label{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Averta','Helvetica Neue','Open Sans',Arial,sans-serif;
+  font-weight: 300 !important;
+  padding-bottom: 0 !important;
+
+}
+#mc_embed_signup input {
+    border: 1px solid #131c21 !important;
+    -webkit-appearance: none;
+}
+
+#mc_embed_signup label h4{
+  margin-top: 5px;
+}
+
+.section-subscribe{
+  padding: 0;
+}
+
+.section-subscribe .btn{
+  padding: 0 25px;
+  height: 40px;
+  margin-top: 0 !important;
+  line-height: 30px;
+  border-color: #eb3971 !important;
+}
+
+.section-subscribe .container{
+  border-bottom: 1px solid rgba(123,123,124,0.6);
+  padding: 25px 0;
+}
+.section-apps .mail{
+  margin: 50px 0;
+  a{
+    margin-bottom: 0;
+  }
+}
+.section-apps .card{
+  min-height: 600px;
+}
+
+.section-apps .card .content{
+  padding: 25px 25px 0;
+}
+.section-apps .card .footer .btn{
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #fff;
+  padding: 0 15px;
+  line-height: 40px;
+  height: 40px;
+}
+
+.section-apps .card .footer .btn i{
+  margin-left: 0;
+}
+
+.section-apps .card .title{
+  margin-bottom: 10px;
+}
 
 
 .section-expo{
   background: linear-gradient(to bottom, #141d22 0%, #0a0b0d 100%);
+  overflow: hidden;
 }
 
 .section-expo .title{
@@ -711,6 +805,11 @@ a[rel="tooltip"]{
   font-size: 60px;
 }
 
+@media (min-width: 1200px){
+  .section-header{
+    background-size: cover;
+  }
+}
 
 @media (max-width: 1200px){
   .section-header h1.title{
@@ -744,8 +843,22 @@ a[rel="tooltip"]{
 
   .section-informations{
     .info{
-      height: 450px;
+      height: 515px;
+      hr{
+        margin-bottom: 0;
+      }
     }
+  }
+
+  .info .description .info-2{
+    position: absolute;
+    bottom: 7%;
+    width: 80%;
+  }
+
+  .section-apps .card .footer{
+    position: absolute;
+    bottom: 20px;
   }
 
 
@@ -821,6 +934,21 @@ a[rel="tooltip"]{
     font-size: 28px;
   }
 
+  .section-expo{
+    .description{
+      text-align: center !important;
+      .white{
+        margin: auto;
+      }
+    }
+  }
+
+}
+
+@media(min-width: 768px){
+  .d-sm-none{
+    display: none !important;
+  }
 }
 
 @media(max-width: 768px){
@@ -1124,7 +1252,8 @@ a[rel="tooltip"]{
 
 .navbar .navbar-brand img{
   display: inline;
-  margin-right: 5px;
+  width: 8%;
+  margin-top: -3px;
 }
 
 .navbar .navbar-nav > li > a{
@@ -1375,6 +1504,7 @@ a[rel="tooltip"]{
 
 .section-informations{
   .info{
+    overflow: hidden;
     background: #fafafa;
     text-align: left;
     padding: 30px 20px;
@@ -1416,9 +1546,16 @@ a[rel="tooltip"]{
   }
   img{
     width: 100%;
+    max-height: 280px;
   }
   a{
     color: #333333;
+    &.btn{
+      color: #fff;
+      padding: 0 15px;
+      line-height: 40px;
+      height: 40px;
+    }
   }
   }
 }

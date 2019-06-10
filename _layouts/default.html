@@ -6,61 +6,38 @@ layout: compress
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {% if page.brand == 'index-page' %}
 
-  <title>{{ site.name }} - {{ site.description }}</title>
-
-  {% elsif page.brand == 'presentation-page' %}
-
-  <title>Presentation - Galio React Native Framework @ Galio </title>
-
-  {% endif %}
-
-
+  <title>{{ site.name }} - {{ page.meta_title }}</title>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
   <!-- Canonical SEO -->
-  {% if page.brand == 'index-page' %}
-
-	<link rel="canonical" href="https://galio.io">
-
-  {% elsif page.brand == 'presentation-page' %}
-
-  <link rel="canonical" href="https://galio.io/presentation">
-
-  {% endif %}
+	<link rel="canonical" href="{{ page.canonical }}">
 
 	<!--  Social tags      -->
-  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="keywords" content="{{ page.keywords }}">
 
-	<meta name="description" content="Galio is a beautifully designed, Free and Open Source React Native Framework">
-
-	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="Galio - React Native Framework">
-	<meta itemprop="description" content="Galio is a beautifully designed, Free and Open Source React Native Framework">
-
-	<meta itemprop="image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
+	<meta name="description" content="{{ page.description }}">
 
 	<!-- Twitter Card data -->
 	<meta name="twitter:card" content="product">
 	<meta name="twitter:site" content="@galioframework">
-	<meta name="twitter:title" content="Galio - React Native Framework">
+	<meta name="twitter:title" content="Galio Framework - React Native Framework">
 
-	<meta name="twitter:description" content="Galio is a beautifully designed, Free and Open Source React Native Framework.">
+	<meta name="twitter:description" content="{{ page.description }}">
 	<meta name="twitter:creator" content="@galioframework">
 	<meta name="twitter:image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
 
 	<!-- Open Graph data -->
 	<meta property="fb:app_id" content="">
-	<meta property="og:title" content="Galio - React Native Framework">
+	<meta property="og:title" content="Galio Framework - React Native Framework">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://galio.io">
 	<meta property="og:image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
-	<meta property="og:description" content="Galio is a beautifully designed, Free and Open Source React Native Framework.">
-	<meta property="og:site_name" content="Galio - React Native Framework">
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:site_name" content="Galio Framework - React Native Framework">
 
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 
@@ -87,8 +64,13 @@ layout: compress
   </script>
   <!-- End Hotjar Tracking Code -->
 
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/e1437303897bec84c0ce8e20c/7a39f2a9c1d8309930f815f21.js");</script>
+
+
+
+
 </head>
-<body class="{% if page.brand == "index-page" %} index-page {% endif %}">
+<body class="index-page">
   <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9SQDH"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -112,7 +94,6 @@ layout: compress
 	<script src="js/jquery.sharrre.min.js"></script>
 
   <script src="js/galio.js"></script>
-  {% if page.brand == 'index-page' %}
 
     <script>window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
@@ -136,6 +117,5 @@ layout: compress
       };
       </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-    {% endif %}
 </body>
 </html>
