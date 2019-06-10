@@ -100,6 +100,27 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
       box-shadow: none;
     }
   }
+
+  &.btn-default{
+    border:1px solid #a0a0a0;
+    color: #a0a0a0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+      border:1px solid #a0a0a0;
+      color: #a0a0a0 !important;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-sm{
+    padding: 0 30px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
 .btn:hover,
 .btn:focus,
@@ -332,7 +353,12 @@ a[rel="tooltip"]{
   border-bottom: 1px solid rgba(123,123,124,0.6);
   padding: 25px 0;
 }
-
+.section-apps .mail{
+  margin: 50px 0;
+  a{
+    margin-bottom: 0;
+  }
+}
 .section-apps .card{
   min-height: 600px;
 }
@@ -908,6 +934,21 @@ a[rel="tooltip"]{
     font-size: 28px;
   }
 
+  .section-expo{
+    .description{
+      text-align: center !important;
+      .white{
+        margin: auto;
+      }
+    }
+  }
+
+}
+
+@media(min-width: 768px){
+  .d-sm-none{
+    display: none !important;
+  }
 }
 
 @media(max-width: 768px){
@@ -1211,7 +1252,8 @@ a[rel="tooltip"]{
 
 .navbar .navbar-brand img{
   display: inline;
-  margin-right: 5px;
+  width: 8%;
+  margin-top: -3px;
 }
 
 .navbar .navbar-nav > li > a{

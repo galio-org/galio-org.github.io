@@ -6,17 +6,8 @@ layout: compress
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {% if page.brand == 'index-page' %}
 
-  <title>{{ site.name }} - {{ page.description }}</title>
-
-  {% elsif page.brand == 'presentation-page' %}
-
-  <title>Presentation - Galio React Native Framework @ Galio </title>
-
-  {% endif %}
-
-
+  <title>{{ site.name }} - {{ page.meta_title }}</title>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,16 +21,10 @@ layout: compress
 
 	<meta name="description" content="{{ page.description }}">
 
-	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="Galio - React Native Framework">
-	<meta itemprop="description" content="{{ page.description }}">
-
-	<meta itemprop="image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
-
 	<!-- Twitter Card data -->
 	<meta name="twitter:card" content="product">
 	<meta name="twitter:site" content="@galioframework">
-	<meta name="twitter:title" content="Galio - React Native Framework">
+	<meta name="twitter:title" content="Galio Framework - React Native Framework">
 
 	<meta name="twitter:description" content="{{ page.description }}">
 	<meta name="twitter:creator" content="@galioframework">
@@ -47,12 +32,12 @@ layout: compress
 
 	<!-- Open Graph data -->
 	<meta property="fb:app_id" content="">
-	<meta property="og:title" content="Galio - React Native Framework">
+	<meta property="og:title" content="Galio Framework - React Native Framework">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://galio.io">
 	<meta property="og:image" content="https://raw.githack.com/galio-org/galio/master/assets/galio_thumbnail.jpg">
 	<meta property="og:description" content="{{ page.description }}">
-	<meta property="og:site_name" content="Galio - React Native Framework">
+	<meta property="og:site_name" content="Galio Framework - React Native Framework">
 
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 
@@ -85,7 +70,7 @@ layout: compress
 
 
 </head>
-<body class="{% if page.brand == "index-page" %} index-page {% endif %}">
+<body class="index-page">
   <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9SQDH"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -109,7 +94,6 @@ layout: compress
 	<script src="js/jquery.sharrre.min.js"></script>
 
   <script src="js/galio.js"></script>
-  {% if page.brand == 'index-page' %}
 
     <script>window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
@@ -133,6 +117,5 @@ layout: compress
       };
       </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-    {% endif %}
 </body>
 </html>
