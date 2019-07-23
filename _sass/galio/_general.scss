@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Averta';
-  src: url("../fonts/averta/Averta-Regular.eot");
-  src: url("../fonts/averta/Averta-Regular.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/averta/Averta-Regular.woff") format("woff"),
-       url("../fonts/averta/Averta-Regular.ttf") format("truetype");
+  src: url("../../../fonts/averta/Averta-Regular.eot");
+  src: url("../../../fonts/averta/Averta-Regular.eot?#iefix") format("embedded-opentype"),
+       url("../../../fonts/averta/Averta-Regular.woff") format("woff"),
+       url("../../../fonts/averta/Averta-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
   @font-face {
     font-family: 'Averta';
-    src: url("../fonts/averta/Averta-Light.eot");
-    src: url("../fonts/averta/Averta-Light.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/averta/Averta-Light.woff") format("woff"),
-         url("../fonts/averta/Averta-Light.ttf") format("truetype");
+    src: url("../../../fonts/averta/Averta-Light.eot");
+    src: url("../../../fonts/averta/Averta-Light.eot?#iefix") format("embedded-opentype"),
+         url("../../../fonts/averta/Averta-Light.woff") format("woff"),
+         url("../../../fonts/averta/Averta-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
@@ -558,7 +558,7 @@ a[rel="tooltip"]{
 }
 .section-header{
   padding-top: 100px;
-  background: url("../img/header-bg.png");
+  background: url("../../../img/header-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -858,7 +858,7 @@ a[rel="tooltip"]{
 
   .section-apps .card .footer{
     position: absolute;
-    bottom: 20px;
+    bottom: 5px;
   }
 
 
