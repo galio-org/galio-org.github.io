@@ -74,35 +74,11 @@
     .navbar-toggle{
       display: none;
     }
-
-    .navbar-burger{
-        .container{
-            padding: 0 15px;
-        }
-        .navbar-header{
-            width: 100%;
-        }
-        .navbar-toggle{
-            display: block;
-            margin-right: 0;
-        }
-
-        &.navbar .navbar-collapse.collapse,
-        &.navbar .navbar-collapse.collapse.in,
-        &.navbar .navbar-collapse.collapsing{
-            display: none !important;
-        }
-    }
 }
 
 /*          Changes for small display      */
 
 @media (max-width: 767px){
-    .navbar-transparent{
-        padding-top: 15px;
-        background-color: rgba(0, 0, 0, 0.45);
-    }
-
     .body-click {
         right: 230px;
     }
@@ -151,17 +127,6 @@
         height: 2px;
         border-radius: 1px;
         margin: 0 auto;
-    }
-
-    .navbar-default .navbar-toggle .icon-bar{
-        background-color: $default-color;
-    }
-
-    .navbar-header .navbar-toggle {
-        margin-top: 17px;
-        margin-bottom: 17px;
-        width: 40px;
-        height: 40px;
     }
     .bar1,
     .bar2,
@@ -258,23 +223,11 @@
         -webkit-backface-visibility: hidden;
     }
 
-    .social-line .btn{
-        margin: $margin-bottom;
-    }
-    .subscribe-line .form-control{
-        margin: $margin-bottom;
-    }
-    .social-line.pull-right{
-        float: none;
-    }
     .footer nav.pull-left{
         float: none !important;
     }
     .footer:not(.footer-big) nav > ul li{
         float: none;
-    }
-    .social-area.pull-right{
-        float: none !important;
     }
     .form-control + .form-control-feedback{
         margin-top: -8px;
@@ -286,28 +239,5 @@
     .btn.dropdown-toggle{
         margin-bottom: 0;
     }
-    .media-post .author{
-        width: 20%;
-        float: none !important;
-        display: block;
-        margin: 0 auto 10px;
-    }
-    .media-post .media-body{
-        width: 100%;
-    }
 
-}
-
-//overwrite table responsive for 768px screens
-
-@media (max-width: 768px){
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        border: 1px solid #dddddd;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        -webkit-overflow-scrolling: touch;
-    }
 }
