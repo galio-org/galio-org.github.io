@@ -71,6 +71,10 @@
         @include transform-translate-x(-200px);
     }
 
+    .navbar-toggle{
+      display: none;
+    }
+
     .navbar-burger{
         .container{
             padding: 0 15px;
@@ -135,6 +139,10 @@
         @include transform-translate-x(0px);
     }
 
+    .navbar-toggle{
+      background: transparent;
+    }
+
     .navbar-toggle .icon-bar{
         display: block;
         position: relative;
@@ -165,9 +173,11 @@
       @include bar-animation($topbar-back);
     }
     .bar2 {
+      top: 3px;
       opacity: 1;
     }
     .bar3 {
+      top: 6px;
       bottom: 0px;
       @include bar-animation($bottombar-back);
     }
@@ -180,6 +190,7 @@
     }
     .toggled .bar3 {
       bottom: 6px;
+      top: 2px;
       @include bar-animation($bottombar-x);
     }
 
