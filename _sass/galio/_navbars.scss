@@ -53,8 +53,8 @@
     margin-top: -5px;
 }
 
-.navbar-toggle:hover,
-.navbar-toggle:focus {
+.navbar-toggler:hover,
+.navbar-toggler:focus {
     background-color: transparent;
 }
 
@@ -63,7 +63,7 @@
     border-top-color: $white-color;
 }
 
-.navbar-toggle{
+.navbar-toggler{
     margin-top: 19px;
     margin-bottom: 19px;
     border: $none;

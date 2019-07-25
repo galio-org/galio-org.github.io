@@ -211,7 +211,7 @@
         @include transform-translate-x(-200px);
     }
 
-    .navbar-toggle{
+    .navbar-toggler{
       display: none;
     }
 }
@@ -243,23 +243,17 @@
                 @include transform-translate-x(-230px);
             }
         }
-
-        .navbar-collapse.collapse,
-        .navbar .navbar-collapse.collapse.in,
-        .navbar .navbar-collapse.collapsing{
-            display: none !important;
-        }
     }
 
     .nav-open .navbar-collapse{
         @include transform-translate-x(0px);
     }
 
-    .navbar-toggle{
+    .navbar-toggler{
       background: transparent;
     }
 
-    .navbar-toggle .icon-bar{
+    .navbar-toggler .icon-bar{
         display: block;
         position: relative;
         background: $white-color;
@@ -286,14 +280,14 @@
       bottom: 0px;
       @include bar-animation($bottombar-back);
     }
-    .toggled .bar1 {
+    [aria-expanded="true"] .bar1 {
       top: 6px;
       @include bar-animation($topbar-x);
     }
-    .toggled .bar2 {
+    [aria-expanded="true"] .bar2 {
       opacity: 0;
     }
-    .toggled .bar3 {
+    [aria-expanded="true"] .bar3 {
       bottom: 6px;
       top: 2px;
       @include bar-animation($bottombar-x);
@@ -372,8 +366,8 @@
     .form-control + .form-control-feedback{
         margin-top: -8px;
     }
-    .navbar-toggle:hover,
-    .navbar-toggle:focus {
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
         background-color: transparent !important;
     }
     .btn.dropdown-toggle{
