@@ -52,7 +52,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 h1 .subtitle{
     display: block;
     font-family: 'Grand Hotel',cursive;
-    margin: 0 0 $margin-large-vertical;   
+    margin: 0 0 $margin-large-vertical;
 }
 
 .text-primary, .text-primary:hover{
@@ -71,3 +71,12 @@ h1 .subtitle{
     color: $danger-color !important;
 }
 
+
+
+.text-white{
+  color: white !important;
+}
+
+.text-grey{
+  color: #b9b9b9 !important;
+}

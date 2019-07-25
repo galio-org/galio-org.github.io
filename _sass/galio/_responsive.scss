@@ -1,4 +1,144 @@
 
+@media (min-width: 1200px){
+  .section-header{
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1200px){
+  .section-header h1.title{
+    font-size: 40px;
+  }
+
+  .red-shadow{
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .section-header img.phone2{
+    right: -10px;
+  }
+
+  .section-categories .text-right,
+  .section-categories .text-left {
+    top: 180%;
+
+}
+}
+
+@media (min-width: 992px){
+  .section-technologies{
+    margin-bottom: 350px;
+  }
+
+  .section-header .card-featured-content img{
+    margin: 100px 60px 20px 0px;
+  }
+
+  .section-informations{
+    .info{
+      height: 515px;
+      hr{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .info .description .info-2{
+    position: absolute;
+    bottom: 7%;
+    width: 80%;
+  }
+
+  .section-apps .card .footer{
+    position: absolute;
+    bottom: 5px;
+  }
+
+
+}
+
+@media (max-width: 991px){
+
+  .section-header img{
+    top: 55%;
+  }
+
+  .section-technologies .row img{
+    position: relative;
+  }
+
+
+.section-road h4{
+  font-size: 18px;
+}
+.section-road h5{
+  font-size: 16px;
+}
+.section-road .step .line.arrow::after{
+  border-left-width: 40px;
+  border-bottom-width: 20px;
+  border-top-width: 20px;
+}
+
+  .shadow{
+    border-radius: 25px;
+    margin-bottom: 30px;
+  }
+
+  .section-header img.phone1{
+    right: 10%;
+    width: 50%;
+    margin-top: -385px;
+    z-index: 0;
+  }
+
+  .section-header img.phone2{
+    width: 25%;
+    right: 0px;
+    margin-top: -305px;
+  }
+
+  .section-header .card-featured-content {
+    margin-top: 100px;
+  }
+
+  .section-header .card-featured-content img{
+    margin-right: 45px;
+  }
+
+  .section-hacktoberfest .img-top,
+  .section-hacktoberfest .img-bottom{
+    display: none;
+  }
+
+  .section-hacktoberfest img{
+    width: 25%;
+  }
+
+  .section-categories .text-right,
+  .section-categories .text-left {
+    top: 170%;
+    font-size: 40px;
+
+  }
+
+  .section-categories .text-right span,
+  .section-categories .text-left span{
+    font-size: 28px;
+  }
+
+  .section-expo{
+    .description{
+      text-align: center !important;
+      .white{
+        margin: auto;
+      }
+    }
+  }
+
+}
+
 @media (min-width: 768px){
     .navbar-form {
         margin-top: 21px;
@@ -240,4 +380,208 @@
         margin-bottom: 0;
     }
 
+    .phone1, .phone2{
+      display: none;
+    }
+
+    .section-header{
+      background-size: auto;
+    }
+
+    .section-technologies{
+      text-align: center;
+    }
+
+    .section-categories{
+      margin-bottom: 400px;
+    }
+
+    .section-categories img{
+      top: 95%;
+    }
+
+    .section-header h1.title{
+      font-size: 30px;
+    }
+
+    .section-header .desc{
+      font-size: 16px;
+    }
+
+    .section-header .card-featured-content{
+      text-align: left;
+    }
+
+    .section-categories img{
+      width: 40%;
+    }
+
+    .section-technologies .row img{
+      width: 90%;
+    }
+
+    .footer{
+      text-align: center;
+    }
+
+    .footer .container .copyright{
+      margin: 15px 0;
+    }
+
+    .section-road .step{
+      height: auto;
+    }
+
+    .section-hacktoberfest img{
+      width: 40%;
+    }
+
+    .section-categories .text-right, .section-categories .text-left {
+      top: 160%;
+      font-size: 30px;
+    }
+
+    .section-categories .text-right span,
+    .section-categories .text-left span{
+      font-size: 20px;
+    }
+
+    nav.navbar{
+      padding-top: 0;
+    }
+
+    .section-header .title{
+      margin-top: 0;
+    }
+}
+
+
+@media (max-width: 576px){
+.section-header img{
+  top: 80%;
+}
+
+.btn{
+  padding: 0 20px;
+}
+
+.section-road .step .line{
+  height: 16px;
+}
+
+.section-road .step .line.arrow::after{
+  border-left-width: 25px;
+}
+
+.section-header .btn.btn-rose{
+  width: 100%;
+}
+
+.section-categories{
+  margin-bottom: 180px;
+}
+
+.section-categories ul.list-group .list-group-item.disabled a:after{
+  height: 8px;
+  width: 22px;
+  top: 5px;
+  right: -17px;
+  font-size: 6px;
+}
+
+.section-expo .img-expo{
+  width: 50%;
+}
+
+.section-hacktoberfest .btn{
+  width: 100%;
+}
+
+.section-categories svg{
+  margin-top: -1px;
+}
+
+.section-startup .info img,
+.section-startup .info .btn{
+  width: 100%;
+}
+
+.section-categories .text-right,
+.section-categories .text-left{
+  top: 135%;
+  font-size: 20px;
+}
+
+.section-categories .text-right span,
+.section-categories .text-left span{
+  font-size: 12px;
+}
+
+.section-categories .text-left{
+  left: 5%;
+}
+
+.section-categories .text-right{
+  right: 5%;
+}
+
+.section-header{
+  padding-bottom: 0;
+}
+.section-header .btn-rose{
+  margin-top: 30px;
+}
+
+.section-header .space-50{
+  display: none;
+}
+
+.section-header .card-featured-content{
+  margin-top: 60px;
+}
+
+.section-do .space-50{
+  display: none;
+}
+
+.section-do .info{
+  margin-top: 30px;
+}
+
+.section-technologies{
+  padding-top: 0;
+}
+
+.section-technologies .title{
+  margin-top: 0;
+}
+
+.section-products{
+  margin-top: 0;
+}
+
+.section-categories .space-110{
+  display: none;
+}
+
+.section-categories .tag{
+  margin-top: 80px;
+}
+
+.section-road{
+  padding:0;
+}
+
+.section-road .title{
+  margin-top: 0;
+}
+
+.section-road .desc{
+  margin-bottom: 0;
+}
+
+.section-header .card-featured-content img{
+  width: 85px !important;
+  margin-right: 25px !important;
+}
 }
