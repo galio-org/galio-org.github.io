@@ -136,6 +136,9 @@
       }
     }
   }
+  .section-technologies .row img{
+    position: relative !important;
+  }
 
 }
 
@@ -447,6 +450,10 @@
     .section-header .title{
       margin-top: 0;
     }
+
+      .section-subscribe #mc-embedded-subscribe{
+        margin-top: 25px !important;
+      }
 }
 
 
@@ -578,4 +585,31 @@
   width: 85px !important;
   margin-right: 25px !important;
 }
+
+.section-categories .text-left,
+.section-categories .text-right {
+      font-size: 28px !important;
+      top: 230% !important;
+      span{
+        font-size: 20px !important;
+      }
+  }
+
+  .section-categories .text-right {
+    color: #090b0e;
+  }
+
+  .section-community .w-100 a{
+    margin-left: 2% !important;
+  }
+
+  .navbar .navbar-brand{
+    padding-right: 0;
+    padding-left: 0;
+    width: 70%;
+  }
+
+
+
+
 }
