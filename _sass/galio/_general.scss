@@ -342,7 +342,7 @@ a[rel="tooltip"]{
 .section-expo img{
   position: absolute !important;
   top: 0;
-  width: 35%;
+  width: 32%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -904,6 +904,10 @@ a[rel="tooltip"]{
   position: relative;
 }
 
+.btn.btn-sm i{
+  font-size: 16px;
+}
+
 .card .footer{
   background: transparent;
 }
@@ -1066,6 +1070,12 @@ a[rel="tooltip"]{
         color: #d94a72;
       }
     }
+  }
+
+  .container{
+    border-top: 1px solid rgba(123,123,124,0.6);
+    padding-top: 70px;
+    padding-bottom: 40px;
   }
 }
 
