@@ -68,36 +68,4 @@ $(document).ready(function(){
 
   $('[data-toggle="tooltip"]').tooltip()
 
-  $('#twitter').sharrre({
-   share: {
-     twitter: true
-   },
-   enableHover: false,
-   enableTracking: false,
-   buttons: { twitter: {}},
-   click: function(api, options){
-     api.simulateClick();
-     api.openPopup('twitter');
-   },
-   template:'<i class="fa fa-twitter"></i>',
-   url: 'http://galio.io'
- });
-
- $('#facebook').sharrre({
-   share: {
-     facebook: true
-   },
-   buttons: {
-     facebook: {}
-   },
-   enableHover: false,
-   enableTracking: false,
-   click: function(api, options){
-     api.simulateClick();
-     api.openPopup('facebook');
-   },
-   template: '<i class="fa fa-facebook"></i>',
-   url: ' http://galio.io'
- });
-
 });
