@@ -39,9 +39,13 @@ layout: compress
 	<meta property="og:description" content="{{ page.description }}">
 	<meta property="og:site_name" content="Galio Framework - React Native Framework">
 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="viewport" content="width=device-width">
+
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 
-	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css?v={{ site.version }}">
 
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -87,13 +91,11 @@ layout: compress
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-  <script src="js/jquery.js"></script>
-	<script src="js/jquery-ui.custom.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/gsdk.js"></script>
-	<script src="js/jquery.sharrre.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery-ui.custom.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.js"></script>
 
-  <script src="js/galio.js"></script>
+  <script src="assets/js/galio.js"></script>
 
     <script>window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
@@ -117,5 +119,7 @@ layout: compress
       };
       </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v3.3"></script>
 </body>
 </html>

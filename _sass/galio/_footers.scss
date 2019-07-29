@@ -1,0 +1,100 @@
+.footer{
+    background-color: $white-color;
+    line-height: $line-height;
+
+    nav > ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+
+        a:not(.btn){
+            color: $dark-gray;
+            display: block;
+            margin-bottom: 3px;
+            &:hover,
+            &:focus{
+                color: $default-states-color;
+            }
+        }
+    }
+    .social-area{
+        padding: 15px 0;
+        h5{
+            padding-bottom: 15px;
+        }
+    }
+    .social-area > a:not(.btn){
+       color: $dark-gray;
+       display: inline-block;
+       vertical-align: top;
+       padding: $padding-social-a;
+       font-size: $font-size-large-navbar;
+       font-weight: normal;
+       line-height: $line-height;
+       text-align: center;
+       &:hover,
+       &:focus{
+           color: $default-states-color;
+       }
+    }
+    .copyright{
+        color: $default-states-color;
+        padding: 10px 15px;
+        margin: 15px 3px;
+        line-height: 20px;
+        text-align: center;
+    }
+    hr{
+        border-color: $medium-gray;
+    }
+    .title{
+        color: $default-states-color;
+    }
+}
+
+.footer:not(.footer-big){
+    nav > ul{
+       font-size: 16px;
+       li{
+            margin-left: 20px;
+            float: left;
+        }
+        a{
+            padding: 10px 0px;
+            margin: 15px 10px 15px 0px;
+        }
+    }
+}
+
+.footer-black,
+.footer-transparent{
+    background-color: $black-bg;
+    color: $medium-gray;
+
+    nav > ul{
+        a{
+            color: $white-color;
+            &:hover,
+            &:focus{
+                color: $dark-gray;
+            }
+        }
+    }
+    .social-area > a:not(.btn){
+        color: $white-color;
+        &:hover,
+        &:focus{
+            color: $dark-gray;
+        }
+    }
+    .btn-social{
+        color: $white-color;
+    }
+    hr{
+        border-color: $black-hr;
+    }
+    .title{
+        color: $medium-gray;
+    }
+}

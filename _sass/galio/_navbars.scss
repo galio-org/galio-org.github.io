@@ -1,0 +1,78 @@
+.nav {
+    > li{
+        > a:hover,
+        > a:focus{
+            background-color: transparent;
+        }
+    }
+}
+.navbar{
+    border: $none;
+    font-size: $font-size-navbar;
+
+    .navbar-brand {
+        font-weight: $font-weight-bold;
+        margin: $navbar-margin-brand;
+        padding: $navbar-padding-brand;
+        font-size: $font-size-large-navbar;
+    }
+    .navbar-nav{
+         > li > a {
+             padding: $navbar-padding-a;
+             margin: $navbar-margin-a;
+         }
+         > li > a.btn{
+             margin: $navbar-margin-a-btn;
+             padding: $padding-base-vertical $padding-base-horizontal;
+         }
+         > li > a.btn-round{
+             margin: $navbar-margin-a-btn-round;
+         }
+         > li > a [class^="fa"]{
+             font-size: $font-size-large + 1;
+             position: relative;
+             top: 1px;
+        }
+    }
+    .btn{
+       margin: $navbar-margin-btn;
+       font-size: $font-size-base;
+    }
+    .btn-simple{
+        font-size: $font-size-medium;
+    }
+    .caret{
+       // @include center-item();
+    }
+
+
+}
+
+.navbar-nav > li > .dropdown-menu{
+    border-radius: $border-radius-extreme;
+    margin-top: -5px;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color: transparent;
+}
+
+.nav-open .nav .caret{
+    border-bottom-color: $white-color;
+    border-top-color: $white-color;
+}
+
+.navbar-toggler{
+    margin-top: 19px;
+    margin-bottom: 19px;
+    border: $none;
+
+    .icon-bar {
+        background-color: $white-color;
+    }
+     .navbar-collapse,
+     .navbar-form {
+        border-color: transparent;
+    }
+}
