@@ -1124,6 +1124,21 @@ a[rel="tooltip"]{
 
     }
   }
+  .code-fund{
+    max-width: 175px;
+    margin: 0 16px 24px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 6;
+    font-size: 12px;
+    line-height: 1.5em;
+    background-color: transparent;
+  }
   img{
     width: 100%;
     max-height: 280px;
