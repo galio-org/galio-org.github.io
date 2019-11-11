@@ -1140,16 +1140,13 @@ a[rel="tooltip"]{
   }
 }
 
+//Code fund
 
 .code-fund{
-  max-width: 175px;
   margin: 0;
   top: 20%;
   display: flex;
   flex-direction: column;
-  float: right;
-  position: fixed;
-  right: 10px;
   z-index: 6;
   font-size: 12px;
   line-height: 1.5em;
@@ -1172,5 +1169,25 @@ a[rel="tooltip"]{
   }
   .cf-img-wrapper{
     margin-right: 0 !important;
+  }
+}
+
+.fb-like span{
+  vertical-align: inherit !important;
+}
+
+
+@media(min-width:768px){
+  .code-fund{
+    max-width: 175px;
+    float: right;
+    position: fixed;
+    right: 10px;
+  }
+}
+
+@media(max-width:767px){
+  .code-fund{
+    position: relative;
   }
 }
