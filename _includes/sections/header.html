@@ -2,7 +2,7 @@
   <div class="container">
     <div class="col-md-6 mx-auto text-center">
       {% if page.brand == 'index-page' %}
-      <img src="assets/img/logo.png">
+      <img src="assets/img/logo.png" class="logo">
       {% endif %}
       <h1 class="title">
         {% if page.brand == 'index-page' %}
@@ -18,17 +18,11 @@
         <a href="https://github.com/galio-org/galio" target="_blank" class="btn btn-default btn-sm mb-2">
           Github
         </a>
-        <a href="https://github.com/galio-org/galio-starter-kit" target="_blank" class="btn btn-default btn-sm mb-2">
-          Starter Kit
-        </a>
         <a href="https://galio.io/docs/#/install" target="_blank" class="btn btn-default btn-sm mb-2">
           Documentation
         </a>
         <a href="https://github.com/galio-org/galio/releases" target="_blank" class="btn btn-default btn-sm mb-2">
           Releases
-        </a>
-        <a href="https://discordapp.com/invite/WCrRMr7" target="_blank" class="btn btn-default btn-sm mb-2">
-          Discord
         </a>
       </div>
 
@@ -37,15 +31,21 @@
 
       <br>
       <div class="github-buttons">
-        <a class="github-button" href="{{ site.github_url }}" data-icon="octicon-star" data-show-count="true" aria-label="Star galio-org/galio on GitHub">Star</a>
-        <a class="github-button" href="{{ site.github_url }}/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork galio-org/galio on GitHub">Fork</a>
+        <div class="d-block mb-2">
+          <a class="github-button" href="{{ site.github_url }}" data-icon="octicon-star" data-show-count="true" aria-label="Star galio-org/galio on GitHub">Star</a>
+          <a class="github-button" href="{{ site.github_url }}/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork galio-org/galio on GitHub">Fork</a>
+          <!-- Place this tag where you want the button to render. -->
+          <a class="github-button" href="https://github.com/sponsors/galio-org" data-icon="octicon-heart" aria-label="Sponsor @galio-org on GitHub">Sponsor</a>
+          <a href="{{ site.discord_link }}" target="_blank">
+            <img src="https://img.shields.io/discord/634211925399437322.svg?logo=discord&colorB=7289DA" class="mt-0 ml-1" style="width: 100px; vertical-align: top;">
+          </a>
+        </div>
+        <div>
         <a class="twitter-follow-button"
           href="https://twitter.com/galioframework" data-show-count="true" data-show-screen-name="false" target="_blank">
         Follow</a>
         <div class="fb-like" data-href="https://facebook.com/GalioFramework" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-        <a href="https://discord.gg/WCrRMr7" target="_blank">
-          <img src="https://img.shields.io/discord/634211925399437322.svg?logo=discord&colorB=7289DA" class="mt-0 mx-auto d-block" style="width: 100px">
-        </a>
+      </div>
       </div>
     </div>
 

@@ -499,7 +499,7 @@ a[rel="tooltip"]{
   color: #232241;
 }
 
-.section-header img{
+.section-header .logo{
   position: absolute;
   width: 35%;
 }
@@ -995,12 +995,12 @@ a[rel="tooltip"]{
     background-color: #090c0f;
     border-radius: 0;
   }
-  img{
+  .logo{
     position: relative;
   }
 
   .section-header{
-    img{
+    .logo{
       margin-top: 40px;
     }
     .title{
@@ -1154,18 +1154,18 @@ a[rel="tooltip"]{
   font-size: 12px;
   line-height: 1.5em;
   background-color: #fff;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-radius: 4px;
 
   .cf-wrapper{
     padding: 10px !important;
-    width: 150px;
+    // width: 150px;
     background-color: #fff !important;
   }
   img{
     width: 100%;
     margin-top: 0 !important;
     margin-bottom: 8px;
+    margin-right: 8px;
     &[data-src="impression_url"]{
       position: fixed;
       left: -1000px;
@@ -1182,14 +1182,15 @@ a[rel="tooltip"]{
 }
 
 
-@media(min-width:768px){
-  .code-fund{
-    max-width: 175px;
-    float: right;
-    position: fixed;
-    right: 30px;
-  }
-}
+// @media(min-width:768px){
+//   .code-fund{
+//     max-width: 175px;
+//     float: right;
+//     position: fixed;
+//     right: 30px;
+//     bottom: 2%;
+//   }
+// }
 
 @media(max-width:767px){
   .code-fund{
