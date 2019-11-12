@@ -499,7 +499,7 @@ a[rel="tooltip"]{
   color: #232241;
 }
 
-.section-header img{
+.section-header .logo{
   position: absolute;
   width: 35%;
 }
@@ -995,12 +995,12 @@ a[rel="tooltip"]{
     background-color: #090c0f;
     border-radius: 0;
   }
-  img{
+  .logo{
     position: relative;
   }
 
   .section-header{
-    img{
+    .logo{
       margin-top: 40px;
     }
     .title{
@@ -1022,7 +1022,10 @@ a[rel="tooltip"]{
 
   .buttons{
     .btn{
-      margin: 0 10px;
+      margin: 0 5px;
+      &.btn-sm{
+        padding: 0 15px;
+      }
     }
   }
 
@@ -1137,5 +1140,66 @@ a[rel="tooltip"]{
       height: 40px;
     }
   }
+  }
+}
+
+//Code fund
+
+.code-fund{
+  margin: 0;
+  bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  font-size: 12px;
+  line-height: 1.5em;
+  background-color: #fff;
+  border-radius: 4px;
+
+  .cf-wrapper{
+    padding: 10px !important;
+    // width: 150px;
+    background-color: #fff !important;
+  }
+  img{
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    &[data-src="impression_url"]{
+      position: fixed;
+      left: -1000px;
+      top: -1000px;
+    }
+  }
+  .cf-img-wrapper{
+    margin-right: 0 !important;
+  }
+}
+
+.fb-like span{
+  vertical-align: inherit !important;
+}
+
+
+// @media(min-width:768px){
+//   .code-fund{
+//     max-width: 175px;
+//     float: right;
+//     position: fixed;
+//     right: 30px;
+//     bottom: 2%;
+//   }
+// }
+
+@media(max-width:767px){
+  .code-fund{
+    position: relative;
+    border: 1px solid #f2f2f2;
+    margin-top: 20px;
+    border-radius: 4px;
+    .cf-wrapper{
+      width: auto;
+    }
   }
 }
