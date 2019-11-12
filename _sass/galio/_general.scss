@@ -1147,14 +1147,16 @@ a[rel="tooltip"]{
 
 .code-fund{
   margin: 0;
-  top: 20%;
+  bottom: 0%;
   display: flex;
   flex-direction: column;
   z-index: 6;
   font-size: 12px;
   line-height: 1.5em;
   background-color: #fff;
-  border-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+
   .cf-wrapper{
     padding: 10px !important;
     width: 150px;
@@ -1185,12 +1187,18 @@ a[rel="tooltip"]{
     max-width: 175px;
     float: right;
     position: fixed;
-    right: 10px;
+    right: 30px;
   }
 }
 
 @media(max-width:767px){
   .code-fund{
     position: relative;
+    border: 1px solid #f2f2f2;
+    margin-top: 20px;
+    border-radius: 4px;
+    .cf-wrapper{
+      width: auto;
+    }
   }
 }
