@@ -17,7 +17,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://galio.io',
+  url: 'https://galio-org.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -26,6 +26,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'galio-org',
   projectName: 'galio-org.github.io',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
