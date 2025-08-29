@@ -1,3 +1,7 @@
+---
+title: Galio Components
+description: Comprehensive documentation of all components available in the Galio Framework, including usage examples and customization options.
+---
 # Galio Components
 
 Welcome to the Galio Components documentation! Here you'll find all the available components that make up the Galio Framework.
