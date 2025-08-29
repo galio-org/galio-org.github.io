@@ -44,7 +44,7 @@ export default function CarbonAds({
 
   return (
     <div 
-      id="carbon-ads-container" 
+      id="carbon-ads-container mb-4" 
       className="max-w-sm mx-auto"
     >
       <style dangerouslySetInnerHTML={{

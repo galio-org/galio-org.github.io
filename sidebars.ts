@@ -16,11 +16,6 @@ const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     'intro',
     {
-      type: 'custom',
-      // The path is relative to src/components
-      component: '@site/src/components/CarbonAds',
-    },
-    {
       type: 'category',
       label: 'Get Started',
       collapsed: false,
