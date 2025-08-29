@@ -58,7 +58,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/st-miki/Galio/blob/main',
+            'https://github.com/galio-org/galio-org.github.io/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -120,7 +120,7 @@ const config: Config = {
           position: 'left'
         },
         {
-          href: 'https://github.com/st-miki/Galio',
+          href: 'https://github.com/galio-org/galio',
           position: 'right',
           className: 'header-github-link',
         },
