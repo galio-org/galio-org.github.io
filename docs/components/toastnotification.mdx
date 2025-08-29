@@ -1,0 +1,76 @@
+---
+title: "ToastNotification"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "ToastNotification",
+  "ToastNotification – Documentation"
+]
+source_url: "/docs/components/toastnotification"
+---
+
+## ToastNotification
+
+Toast notifications appear when the user finishes an action and you want to show him a piece of information without redirecting him to another screen.
+
+### Usage
+
+Imports:
+
+```jsx
+import { Toast, Block } from 'galio-framework';
+```
+
+Simple example:
+
+```jsx
+<Button shadowless onPress={() => setShow(!isShow)} style={{ marginBottom: 80 }}>click here for toast notifications</Button>
+<Toast isShow={isShow} positionIndicator="top">This is a top positioned toast</Toast>
+<Toast isShow={isShow} positionIndicator="center" color="success">This is a center positioned toast</Toast>
+<Toast isShow={isShow} positionIndicator="bottom" color="warning">This is a bottom positioned toast</Toast>
+```
+
+Hook used for isShow:
+
+```jsx
+const [isShow, setShow] = useState(false);
+```
+
+Advanced examples:
+
+```jsx
+<Toast
+  isShow={isShow}
+  positionIndicator="top"
+  color="success"
+  title="Success!"
+  message="Operation completed successfully"
+  duration={3000}
+  onHide={() => setShow(false)}
+/>
+
+<Toast
+  isShow={isShow}
+  positionIndicator="center"
+  color="error"
+  title="Error"
+  message="Something went wrong"
+  showCloseButton
+  onClose={() => setShow(false)}
+/>
+```
+
+### Props
+
+| Prop                | Type       | Default    | Description                                                                                         |
+| ------------------- | ---------- | ---------- | --------------------------------------------------------------------------------------------------- |
+| **isShow**          | bool       | false      | Controls toast visibility                                                                           |
+| **positionIndicator** | string  | 'top'      | Toast position: 'top', 'center', 'bottom'                                                          |
+| **color**           | string     | 'primary'  | Toast color theme                                                                                   |
+| **title**           | string     | null       | Toast title                                                                                         |
+| **message**         | string     | null       | Toast message                                                                                       |
+| **duration**        | number     | 3000       | Auto-hide duration in milliseconds                                                                  |
+| **showCloseButton** | bool       | false      | Shows close button                                                                                  |
+| **onHide**          | function   | null       | Callback when toast auto-hides                                                                      |
+| **onClose**         | function   | null       | Callback when close button is pressed                                                               |
+| **style**           | object     | null       | Custom styles                                                                                       |
+| **...View.props**   | -          | -          | All React Native View props are supported                                                           |

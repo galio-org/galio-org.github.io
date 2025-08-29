@@ -1,0 +1,101 @@
+---
+title: "Entrada"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Entrada",
+  "Entrada – Documentación"
+]
+source_url: "/docs/components/input"
+---
+
+## Entrada
+
+Construido sobre el componente TextInput de React Native, este componente básico que permite al usuario ingresar texto fue estilizado basándose en la identidad del tema propio de Galio.
+
+![Entrada](/img/docs/input/input.png)
+
+## Uso
+
+Importaciones:
+
+```jsx
+import { Input, Block } from 'galio-framework';
+```
+
+Ejemplos básicos:
+
+```jsx
+<Input placeholder="regular" />
+<Input placeholder="tema" color={`theme.COLORS.THEME`} style={{ borderColor: `theme.COLORS.THEME` }} placeholderTextColor={`theme.COLORS.THEME`} />
+<Input placeholder="info" color={`theme.COLORS.INFO`} style={{ borderColor: `theme.COLORS.INFO` }} placeholderTextColor={`theme.COLORS.INFO`}/>
+<Input placeholder="advertencia" color={`theme.COLORS.WARNING`} style={{ borderColor: `theme.COLORS.WARNING` }} placeholderTextColor={`theme.COLORS.WARNING`}/>
+<Input placeholder="error" color={`theme.COLORS.ERROR`} style={{ borderColor: `theme.COLORS.ERROR` }} placeholderTextColor={`theme.COLORS.ERROR`}/>
+<Input placeholder="éxito" color={`theme.COLORS.SUCCESS`} style={{ borderColor: `theme.COLORS.SUCCESS` }} placeholderTextColor={`theme.COLORS.SUCCESS`}/>
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Input placeholder="contraseña" password viewPass />
+<Input placeholder="entrada redondeada" rounded />
+<Input
+  placeholder="Entrada con Icono a la derecha"
+  right
+  icon="heart"
+  iconFamily="antdesign"
+  iconSize={14}
+  iconColor="red"
+/>
+<Input
+  placeholder="Entrada con estilos personalizados y ayuda"
+  style={{ borderColor: "red" }}
+  help="Texto de ayuda inferior"
+  bottomHelp
+  placeholderTextColor="#4F8EC9"
+/>
+```
+
+Uso moderno con hooks:
+
+```jsx
+const [value, setValue] = useState('');
+
+<Input
+  value={value}
+  onChangeText={setValue}
+  placeholder="Entrada controlada"
+  color="primary"
+  rounded
+  shadowless
+/>
+```
+
+## Props
+
+| Prop                     | Tipo    | Predeterminado                        | Descripción                                                                 |
+|--------------------------|---------|----------------------------------------|-----------------------------------------------------------------------------|
+| **value**                | string  | null                                   | El valor de la entrada (componente controlado)                              |
+| **onChangeText**         | function| null                                   | Callback cuando cambia el texto                                             |
+| **type**                 | string  | `'default'`                            | Tipo de teclado. Opciones: `'default'`, `'number-pad'`, `'decimal-pad'`, `'numeric'`, `'email-address'`, `'phone-pad'` |
+| **password**             | bool    | false                                  | Entrada de contraseña con texto seguro                                     |
+| **placeholderTextColor** | string  | `theme.COLORS.PLACEHOLDER`             | Color del texto del placeholder                                             |
+| **label**                | string  | null                                   | Etiqueta de la entrada                                                     |
+| **bgColor**              | string  | null                                   | Color de fondo                                                              |
+| **rounded**              | bool    | false                                  | Esquinas redondeadas                                                        |
+| **borderless**           | bool    | false                                  | Elimina el borde                                                            |
+| **viewPass**             | bool    | false                                  | Alternancia de visibilidad de contraseña                                   |
+| **icon**                 | string  | null                                   | Nombre del icono de la biblioteca de iconos de Expo                        |
+| **iconColor**            | string  | null                                   | Color del icono                                                            |
+| **iconFamily**           | string  | null                                   | Familia del icono de la biblioteca de iconos de Expo                       |
+| **iconSize**             | number  | 14                                     | Tamaño del icono                                                           |
+| **color**                | string  | null                                   | Color del texto                                                            |
+| **help**                 | string  | null                                   | Texto de ayuda                                                             |
+| **left**                 | bool    | true                                   | Icono a la izquierda                                                       |
+| **right**                | bool    | false                                  | Icono a la derecha                                                         |
+| **topHelp**              | bool    | true                                   | Ayuda arriba de la entrada                                                 |
+| **bottomHelp**           | bool    | false                                  | Ayuda debajo de la entrada                                                 |
+| **style**                | object  | null                                   | Estilos personalizados                                                     |
+| **inputStyle**           | object  | null                                   | Estilos personalizados de la entrada                                       |
+| **labelStyle**           | object  | null                                   | Estilos personalizados de la etiqueta                                     |
+| **helpStyle**            | object  | null                                   | Estilos personalizados del texto de ayuda                                 |
+| **...TextInput.props**   | -       | -                                      | Todas las props de TextInput son compatibles                               |

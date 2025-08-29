@@ -1,0 +1,88 @@
+---
+title: "Botón"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Botón",
+  "Botón – Documentación"
+]
+source_url: "/docs/components/button"
+---
+
+## Botón
+
+Un componente de botón básico que se ve bien en cualquier plataforma. Este botón de React Native está listo para manejar la mayoría de los escenarios de uso que te permitirán construir aplicaciones más rápido con código más limpio.
+
+![Botón](/img/docs/button/button.png)
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Button } from 'galio-framework';
+```
+
+![Botón](/img/docs/button/buttons_simple.png)
+
+Ejemplo de código:
+
+```jsx
+<Button>primario</Button>
+<Button color="info">info</Button>
+<Button color="success">éxito</Button>
+<Button color="warning">advertencia</Button>
+<Button color="error">error</Button>
+```
+
+![Botón](/img/docs/button/buttons_advanced.png)
+
+Ejemplos avanzados:
+
+```jsx
+<Button 
+  color="primary" 
+  size="large" 
+  shadowless 
+  onPress={() => console.log('Botón presionado')}
+>
+  Presióname
+</Button>
+
+<Button 
+  color="success" 
+  icon="check" 
+  iconFamily="antdesign"
+  iconSize={16}
+  loading={true}
+  loadingSize="small"
+>
+  Botón de Carga
+</Button>
+```
+
+### Props
+
+| Prop           | Tipo         | Predeterminado | Descripción                                                                                            |
+| -------------- | ------------ | --------------- | ------------------------------------------------------------------------------------------------------ |
+| **children**   | node         | null            | Contenido del botón                                                                                     |
+| **color**      | string       | 'primary'       | Opciones de color: 'primary', 'theme', 'error', 'warning', 'success', 'transparent' o color personalizado |
+| **size**       | string       | 'large'         | Opciones de tamaño: 'large', 'small'                                                                   |
+| **disabled**   | bool         | false           | Deshabilita el botón                                                                                    |
+| **loading**    | bool         | false           | Muestra el spinner de carga                                                                             |
+| **loadingSize**| string       | 'small'         | Tamaño del spinner de carga: 'small', 'large'                                                           |
+| **icon**       | string       | null            | Nombre del icono de la biblioteca de iconos de Expo                                                     |
+| **iconColor**  | string       | `theme.COLORS.BLACK` | Color del icono                                                                                         |
+| **iconFamily** | string       | null            | Familia del icono de la biblioteca de iconos de Expo                                                   |
+| **iconSize**   | number       | 14              | Tamaño del icono                                                                                        |
+| **onlyIcon**   | bool         | false           | Estilo para botones solo con icono                                                                      |
+| **capitalize** | bool         | false           | Transforma el primer carácter a mayúscula                                                               |
+| **uppercase**  | bool         | false           | Hace que todas las letras sean mayúsculas                                                              |
+| **lowercase**  | bool         | false           | Hace que todas las letras sean minúsculas                                                              |
+| **radius**     | number       | 0               | Radio del borde                                                                                         |
+| **shadowless** | bool         | false           | Elimina la sombra                                                                                       |
+| **shadowColor**| string       | null            | Color de sombra personalizado                                                                           |
+| **opacity**    | number       | 0.8             | Opacidad del botón                                                                                      |
+| **onPress**    | function     | null            | Función manejadora del evento de presión                                                               |
+| **style**      | object       | null            | Estilos personalizados                                                                                  |
+| **textStyle**  | object       | null            | Estilos personalizados del texto                                                                        |
+| **...TouchableOpacity.props** | - | - | Todas las props de TouchableOpacity son compatibles |

@@ -1,0 +1,81 @@
+---
+title: "Tarjeta"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Tarjeta",
+  "Tarjeta – Documentación"
+]
+source_url: "/docs/components/card"
+---
+
+## Tarjeta
+
+La tarjeta es un contenedor de contenido flexible y extensible. Incluye opciones para encabezados y pies de página, una amplia variedad de contenido, colores de fondo contextuales y opciones de visualización poderosas.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Card } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+<Card
+  flex
+  borderless
+  style={styles.card}
+  title="Christopher Moon"
+  caption="hace 139 minutos"
+  location="Los Ángeles, CA"
+  avatar="http://i.pravatar.cc/100?id=skater"
+  imageStyle={styles.cardImageRadius}
+  imageBlockStyle={{ padding: theme.SIZES.BASE / 2 }}
+  image="https://images.unsplash.com/photo-1497802176320-541c8e8de98d?&w=1600&h=900&fit=crop&crop=entropy&q=300"
+/>
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Card
+  flex
+  card
+  shadow
+  borderless
+  style={styles.card}
+  title="Tarjeta Personalizada"
+  caption="Con estilos personalizados"
+  titleStyle={{ color: 'primary' }}
+  captionStyle={{ color: 'muted' }}
+  footer={
+    <Block row space="between">
+      <Text size={12} color="muted">Contenido del pie de página</Text>
+      <Button size="small" color="primary">Acción</Button>
+    </Block>
+  }
+/>
+```
+
+### Props
+
+| Prop            | Tipo         | Predeterminado | Descripción                                                                                          |
+| --------------- | ------------ | -------------- | ---------------------------------------------------------------------------------------------------- |
+| **children**    | node         | null           | Contenido de la tarjeta                                                                               |
+| **card**        | bool         | true           | Agrega estilos de tarjeta                                                                             |
+| **shadow**      | bool         | true           | Agrega estilos de sombra                                                                              |
+| **borderless**  | bool         | false          | Elimina el borde de la tarjeta                                                                        |
+| **image**       | string       | null           | URL o ruta de la imagen                                                                               |
+| **imageStyle**  | object       | null           | Estilos personalizados de la imagen                                                                   |
+| **imageBlockStyle** | object   | null           | Estilos para el contenedor de la imagen                                                               |
+| **title**       | string       | null           | Título de la tarjeta                                                                                  |
+| **titleStyle**  | object       | null           | Estilos personalizados del título                                                                     |
+| **caption**     | string       | null           | Subtítulo de la tarjeta                                                                               |
+| **captionStyle**| object       | null           | Estilos personalizados del subtítulo                                                                  |
+| **location**    | string       | null           | Texto de ubicación                                                                                    |
+| **avatar**      | string       | null           | URL de la imagen del avatar                                                                           |
+| **footer**      | node         | null           | Contenido del pie de página                                                                           |
+| **style**       | object       | null           | Estilos personalizados                                                                                |
+| **...View.props**| -           | -              | Todas las props de React Native View son compatibles                                                   |

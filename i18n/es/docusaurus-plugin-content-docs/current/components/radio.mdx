@@ -1,0 +1,70 @@
+---
+title: "Radio"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Radio",
+  "Radio – Documentación"
+]
+source_url: "/docs/components/radio"
+---
+
+## Radio
+
+¡Mira qué increíbles se ven estos botones de radio! ¿Quién no querría usarlos?
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Radio } from 'galio-framework';
+```
+
+Ejemplos básicos:
+
+```jsx
+<Radio label="Radio de color primario" color="primary"  />
+<Radio label="Radio de color de información" color="info"  />
+<Radio label="Radio de color de error" color="error"  />
+<Radio label="Radio de color de advertencia" color="warning"  />
+<Radio label="Radio de color de éxito" color="success"  />
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Radio label="initialValue = true" initialValue />
+<Radio label="radioInnerStyle usado" initialValue radioInnerStyle={{ backgroundColor: "#FE2472" }} />
+<Radio label="radioOuterStyle usado" radioOuterStyle={{ backgroundColor: '#FF9C09' }} />
+<Radio label="containerStyle y labelStyle usado" containerStyle={{ backgroundColor: "#FE247220" }} labelStyle={{ color: '#1232FF' }} />
+```
+
+Uso moderno con hooks:
+
+```jsx
+const [selectedValue, setSelectedValue] = useState('option1');
+
+<Radio 
+  label="Opción 1" 
+  value="option1"
+  selected={selectedValue === 'option1'}
+  onPress={() => setSelectedValue('option1')}
+/>
+```
+
+### Props
+
+| Prop                | Tipo     | Predeterminado     | Descripción                                                                 |
+| ------------------- | -------- | ------------------ | --------------------------------------------------------------------------- |
+| **label**           | string   | null               | Etiqueta del botón de radio                                                 |
+| **color**           | string   | `'primary'`        | Color del botón de radio                                                    |
+| **value**           | string   | null               | Valor del botón de radio                                                    |
+| **selected**        | bool     | false              | Si este radio está seleccionado                                            |
+| **onPress**         | function | null               | Callback cuando se presiona el radio                                       |
+| **containerStyle**  | object   | null               | Estilos personalizados del contenedor                                      |
+| **radioOuterStyle** | object   | null               | Estilos personalizados del radio exterior                                  |
+| **radioInnerStyle** | object   | null               | Estilos personalizados del radio interior                                 |
+| **labelStyle**      | object   | null               | Estilos personalizados de la etiqueta                                     |
+| **disabled**        | bool     | false              | Deshabilita el botón de radio                                              |
+| **initialValue**    | bool     | false              | Estado inicial de selección                                                |
+| **style**           | object   | null               | Estilos personalizados                                                     |

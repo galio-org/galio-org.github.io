@@ -1,0 +1,94 @@
+---
+title: "Patrones de Uso Modernos"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Patrones de Uso Modernos",
+  "Patrones de Uso Modernos – Documentación"
+]
+source_url: "/docs/get-started/modern-usage"
+---
+
+## Patrones de Uso Modernos
+
+Esta guía cubre patrones de uso modernos de Galio, soporte para TypeScript y mejores prácticas.
+
+### Soporte para TypeScript
+
+Galio proporciona soporte completo para TypeScript con definiciones de tipos apropiadas.
+
+#### Uso Básico de TypeScript
+
+```tsx
+import React, { useState } from 'react';
+import { Button, Input, Block, Text } from 'galio-framework';
+
+interface UserFormProps {
+  onSubmit: (data: UserData) => void;
+}
+
+const UserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  return (
+    <Block flex padding={20}>
+      <Input
+        placeholder="Nombre"
+        value={name}
+        onChangeText={setName}
+        color="primary"
+        rounded
+      />
+      <Button color="primary" onPress={() => onSubmit({ name, email })}>
+        Enviar
+      </Button>
+    </Block>
+  );
+};
+```
+
+### Patrones Modernos de React
+
+#### Componentes Funcionales con Hooks
+
+```tsx
+import React, { useState, useEffect } from 'react';
+import { Block, Text, Button, Toast } from 'galio-framework';
+
+const Counter: React.FC = () => {
+  const [count, setCount] = useState(0);
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (count > 10) {
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    }
+  }, [count]);
+
+  return (
+    <Block flex center middle>
+      <Text h1>{count}</Text>
+      <Block row space="around">
+        <Button color="error" onPress={() => setCount(prev => prev - 1)}>
+          Disminuir
+        </Button>
+        <Button color="success" onPress={() => setCount(prev => prev + 1)}>
+          Aumentar
+        </Button>
+      </Block>
+    </Block>
+  );
+};
+```
+
+### Mejores Prácticas
+
+1. **Usa TypeScript** para mejor seguridad de tipos
+2. **Prefiere componentes funcionales** con hooks
+3. **Usa tipos de props apropiados** e interfaces
+4. **Sigue patrones de composición** de componentes
+5. **Usa constantes del tema** consistentemente
+6. **Implementa estados de carga** apropiados
+7. **Prueba tus componentes** exhaustivamente
+8. **Optimiza para el rendimiento** cuando sea necesario

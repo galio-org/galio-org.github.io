@@ -1,0 +1,111 @@
+---
+sidebar_position: 1
+---
+import CarbonAds from '@site/src/components/CarbonAds';
+
+# Galio's Status
+<div className="flex flex-col items-center justify-center space-y-4 p-5 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
+  <div className="relative">
+    <div className="absolute -inset-4 bg-gradient-to-r from-[#ff1270] to-cyan-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
+    <img 
+      src="/img/logo.png" 
+      alt="galio framework" 
+      className="relative w-28 h-28 object-contain drop-shadow-2xl"
+    />
+  </div>
+  
+  <div className="flex flex-wrap justify-center gap-3">
+    {['GitHub', 'Documentation', 'Releases'].map((item) => (
+      <button 
+        key={item}
+        className="px-6 py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 border border-[#ff1270]/30 dark:border-[#ff1270]/50 rounded-lg transition-all duration-200 hover:bg-[#ff1270]/10 dark:hover:bg-[#ff1270]/20 hover:border-[#ff1270] dark:hover:border-[#ff1270] hover:text-[#ff1270] dark:hover:text-[#ff1270] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#ff1270] focus:ring-offset-2"
+      >
+        {item}
+      </button>
+    ))}
+  </div>
+  <div>
+    <CarbonAds serve="CE7IPK3L" placement="galioio" />
+  </div>
+  <div className="flex justify-center mb-0">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-6xl p-6 items-center">
+      <a href="https://github.com/galio-org/galio/issues" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://img.shields.io/github/issues/galio-org/galio.svg?style=popout" alt="GitHub issues" className="h-6" />
+      </a>
+      <a href="https://github.com/galio-org/galio/issues?q=is%3Aissue+is%3Aclosed" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://img.shields.io/github/issues-closed/galio-org/galio.svg" alt="GitHub closed issues" className="h-6" />
+      </a>
+      <a href="https://github.com/galio-org/galio/pulls" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://img.shields.io/github/issues-pr/galio-org/galio.svg" alt="GitHub pull requests" className="h-6" />
+      </a>
+      <a href="https://github.com/galio-org/galio/pulls?q=is%3Apr+is%3Aclosed" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://img.shields.io/github/issues-pr-closed/galio-org/galio.svg" alt="GitHub closed pull requests" className="h-6" />
+      </a>
+      <a href="https://gitter.im/galio-community" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://badges.gitter.im/NIT-dgp/General.svg" alt="Gitter" className="h-6" />
+      </a>
+      <a href="https://www.npmjs.com/package/galio-framework" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://img.shields.io/npm/dm/galio-framework.svg" alt="npm downloads" className="h-6" />
+      </a>
+      <a href="https://opencollective.com/galio/backers" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://opencollective.com/galio/backers/badge.svg" alt="Backers on Open Collective" className="h-6" />
+      </a>
+      <a href="https://opencollective.com/galio/sponsors" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center p-2 rounded-xl bg-white dark:bg-gray-900 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700">
+        <img src="https://opencollective.com/galio/sponsors/badge.svg" alt="Sponsors on Open Collective" className="h-6" />
+      </a>
+    </div>
+  </div>
+</div>
+## Reporting Issues
+
+We use GitHub Issues as the official bug tracker for Galio. Here are some advices for our users that want to report an issue:
+
+1. Make sure that you are using the latest version of Galio. Check for your fork's master branch status and see if it's up to date with the upstream/master (our repository)
+2. Provide us with reproductible steps for the issue.
+3. Some issues may be platform specific, so specifying what platform and if it's a simulator or a hardware device will help a lot.
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [Contribute to Galio](/docs/contributing).
+
+<div className="flex justify-center my-6">
+  <a href="https://github.com/galio-org/galio/contributors" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="https://opencollective.com/galio/contributors.svg?width=890&button=false" 
+      alt="Galio Contributors"
+      className="max-w-full h-auto"
+    />
+  </a>
+</div>
+
+## Backers
+---
+Thank you to all our backers! 🙏 [Become a backer](https://opencollective.com/galio#backer)
+<div className="flex justify-center my-6">
+  <a href="https://opencollective.com/galio#backers" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="https://opencollective.com/galio/backers.svg?width=890" 
+      alt="Galio Backers"
+      className="max-w-full h-auto"
+    />
+  </a>
+</div>
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [Become a sponsor](https://opencollective.com/galio#sponsor)
+
+<div className="flex justify-center my-6">
+  <a href="https://opencollective.com/galio#sponsors" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="https://opencollective.com/galio/sponsors.svg?width=890" 
+      alt="Galio Sponsors"
+      className="max-w-full h-auto"
+    />
+  </a>
+</div>
+## Licensing
+
+Licensed under [MIT](https://github.com/galio-org/galio/blob/master/LICENSE)  
+© 2025 [Galio](https://galio.io/?ref=galio-repo), made with ❤️ for the community.
+

@@ -1,0 +1,80 @@
+---
+title: "DeckSwiper"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "DeckSwiper",
+  "DeckSwiper – Documentation"
+]
+source_url: "/docs/components/deckswiper"
+---
+
+## Deck Swiper
+
+Swipe left, swipe right or don't swipe at all, this component is built to accept any type of component and make it swipeable. Galio's community plans on creating more props for easier access and manipulation of the swipe animation.
+
+### Usage
+
+Imports:
+
+```jsx
+import { DeckSwiper, Block } from 'galio-framework';
+```
+
+Simple example:
+
+```jsx
+<Block>
+  <DeckSwiper components={elements} />
+</Block>
+```
+
+The elements array looks like following:
+
+```jsx
+const elements = [
+  <View style={{ backgroundColor: '#B23AFC', height: 250, width: 250 }}>
+    <Text>You wanna see a cool component?</Text>
+    <Text>Galio has this cool Deck Swiper</Text>
+  </View>,
+  <View style={{ backgroundColor: '#FE2472', height: 250, width: 250 }}>
+    <Text>What did you expect?</Text>
+    <Text>This React Native component works perfectly</Text>
+  </View>,
+  <View style={{ backgroundColor: '#FF9C09', height: 250, width: 250 }}>
+    <Text>Maybe you want to build the next Tinder</Text>
+  </View>,
+  <View style={{ backgroundColor: '#45DF31', height: 250, width: 250 }}>
+    <Text>or maybe you just want a nice deck swiper component</Text>
+    <Text>Galio has everything sorted out for you</Text>
+  </View>
+];
+```
+
+Advanced examples:
+
+```jsx
+<DeckSwiper
+  components={elements}
+  onSwipeLeft={(index) => console.log('Swiped left on:', index)}
+  onSwipeRight={(index) => console.log('Swiped right on:', index)}
+  onSwipeAll={(direction) => console.log('All cards swiped:', direction)}
+  style={{ height: 300 }}
+  cardStyle={{ borderRadius: 16 }}
+  cardElevation={8}
+/>
+```
+
+### Props
+
+| Prop                   | Type     | Default   | Description                                                                 |
+|------------------------|----------|-----------|-----------------------------------------------------------------------------|
+| **components**         | array    | null      | Array of components to render in the deck                                  |
+| **onSwipeLeft**        | function | ()=>{}    | Callback when swiping left                                                 |
+| **onSwipeRight**       | function | ()=>{}    | Callback when swiping right                                                |
+| **onSwipeAll**         | function | ()=>{}    | Callback when all cards are swiped                                         |
+| **style**              | object   | null      | Container styles                                                            |
+| **cardStyle**          | object   | null      | Individual card styles                                                      |
+| **cardElevation**      | number   | 4         | Card elevation/shadow                                                       |
+| **swipeThreshold**     | number   | 120       | Distance required to trigger swipe                                         |
+| **animationDuration**  | number   | 300       | Animation duration in milliseconds                                         |
+| **...View.props**      | -        | -         | All React Native View props are supported                                  |

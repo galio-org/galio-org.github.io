@@ -1,35 +1,80 @@
-# Galio Framework official website
-Galio's official website is open source and a tool for and by the community. Submit isseus and pull requests for site ideas or copy edits.
+# Galio
 
-## Under the Hood
+Galio is cool
 
-The site is made with Jekyll, an open source static site generator. This means Jekyll takes the content we want te be on the site and turns them into HTML files automatically. GitHub provides free hosting for repositories, called GitHub pages, and that's how the site is hosted.
+Galio is a React Native framework that provides pre-built components and beautiful cross-platform templates to speed up your mobile app development. This documentation site is built with Docusaurus.
 
-## Contributing
+## Features
 
-If you see an error or a place where content should be updated or improved, just fork this repository to your account, make the change you'd like and then submit a pull request. If you're not able to make the change, file an [issue](https://github.com/galio-org/galio-org.github.io/issues/new).
+*   **Rich set of customizable components:** Accordion, Block, Button, Card, Checkbox, DeckSwiper, Icon, Input, Navbar, Radio, Slider, Switch, Text, ToastNotification
+*   **Comprehensive documentation:** Detailed guides and API references for each component.
+*   **Examples:** Ready-to-use examples to showcase the usage of different components.
+*   **Easy to get started:** Simple installation and setup process.
+*   **Internationalization:** Supports multiple languages (English and Spanish).
 
-----
+## Getting Started
 
-## To Set up Locally
-
-You can take all the files of this site and run them just on your computer as if it were live online, only it's just on your machine.
-
-#### Requirements
-
-* [Jekyll](http://jekyllrb.com/)
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Git](http://git-scm.com/)
-
-After installing all dependencies, clone the repository and run the following commands:
+### Installation
 
 ```bash
-gem install bundler # first time only
-bundle install # first time only
-bundle exec jekyll serve
+yarn
 ```
-Open `http://localhost:4000` in your browser
 
-----
+or 
 
-Don't see what you're looking for? Create an [issue](https://github.com/galio-org/galio-org.github.io/issues/new), we'll do our best to help you out.
+```bash
+npm
+```
+
+### Local Development
+
+```bash
+yarn start
+```
+
+or 
+
+```bash
+npm start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Build
+
+```bash
+yarn build
+```
+
+or 
+
+```bash
+npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Deployment
+
+Using SSH:
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## License
+
+[MIT](LICENSE)
+
+## Links
+
+*   [Starter Kit](https://github.com/galio-org/galio-starter-kit)
+*   [GitHub Repository](https://github.com/galio-org/galio-org.github.io)

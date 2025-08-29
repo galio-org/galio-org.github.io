@@ -1,0 +1,77 @@
+---
+title: "Casilla de Verificación"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Casilla de Verificación",
+  "Casilla de Verificación – Documentación"
+]
+source_url: "/docs/components/checkbox"
+---
+
+## Casilla de Verificación
+
+Las casillas de verificación permiten a los usuarios completar tareas que involucran tomar decisiones como seleccionar opciones o cambiar configuraciones de encendido a apagado. Usar la función onChange te permitirá llamar a una función cuando cambie el valor del estado, así que básicamente cada vez que el usuario toque la Casilla de Verificación.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Checkbox } from 'galio-framework';
+```
+
+![Casilla de Verificación](/img/docs/checkbox/checkbox_simple.png)
+
+Ejemplos básicos:
+
+```jsx
+<Checkbox color="primary" label="Casilla de Verificación Primaria" />
+<Checkbox color="info" label="Casilla de Verificación de Información" />
+<Checkbox color="error" label="Casilla de Verificación de Error" />
+<Checkbox color="warning" label="Casilla de Verificación de Advertencia" />
+<Checkbox color="success" label="Casilla de Verificación de Éxito" />
+```
+
+![Casilla de Verificación](/img/docs/checkbox/checkbox_advanced.png)
+
+Ejemplos avanzados:
+
+```jsx
+<Checkbox color="primary" flexDirection="row-reverse" label="casilla de verificación row-reverse" />
+<Checkbox color="info" initialValue={true} label="initialValue establecido en true" />
+<Checkbox color="error" initialValue={true} label="icono diferente" iconFamily="font-awesome" iconName="plane" />
+<Checkbox color="warning" labelStyle={{ color: '#FF9C09' }} label="labelStyle usado aquí" />
+<Checkbox color="success" image="https://images.unsplash.com/photo-1569780655478-ecffea4c165c?ixlib=rb-1.2.1" flexDirection="column-reverse"/>
+```
+
+Uso moderno con hooks:
+
+```jsx
+const [isChecked, setIsChecked] = useState(false);
+
+<Checkbox 
+  color="warning" 
+  value={isChecked}
+  onChange={setIsChecked} 
+  label="onChange está aquí" 
+/>
+```
+
+### Props
+
+| Prop              | Tipo    | Predeterminado       | Descripción                                                                                           |
+| ----------------- | ------- | -------------------- | ----------------------------------------------------------------------------------------------------- |
+| **label**         | string  | null                 | Texto de la etiqueta de la casilla de verificación                                                    |
+| **color**         | string  | 'primary'            | Color de la casilla de verificación                                                                   |
+| **value**         | bool    | false                | Valor controlado de la casilla de verificación                                                        |
+| **onChange**      | function| null                 | Callback cuando cambia el estado de la casilla de verificación                                        |
+| **initialValue**  | bool    | false                | Valor inicial de la casilla de verificación                                                           |
+| **disabled**      | bool    | false                | Deshabilita la casilla de verificación                                                                |
+| **flexDirection** | string  | 'row'                | Dirección del diseño: 'row', 'row-reverse', 'column', 'column-reverse'                               |
+| **iconName**      | string  | null                 | Nombre del icono personalizado                                                                        |
+| **iconFamily**    | string  | null                 | Familia del icono personalizado                                                                       |
+| **image**         | string  | null                 | URL de imagen personalizada                                                                            |
+| **checkboxStyle** | object  | null                 | Estilos personalizados de la casilla de verificación                                                 |
+| **labelStyle**    | object  | null                 | Estilos personalizados de la etiqueta                                                                |
+| **containerStyle**| object  | null                 | Estilos personalizados del contenedor                                                                |
+| **style**         | object  | null                 | Estilos personalizados                                                                                |

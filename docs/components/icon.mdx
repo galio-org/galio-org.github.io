@@ -1,0 +1,62 @@
+---
+title: "Icon"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "Icon",
+  "Icon – Documentation"
+]
+source_url: "/docs/components/icon"
+---
+
+## Icon
+
+Icons are used as a visual indicator to describe an action the user could take. That little Facebook icon never looked better.
+
+### Usage
+
+Imports:
+
+```jsx
+import { Icon } from 'galio-framework';
+```
+
+Simple example:
+
+```jsx
+<Icon name="pin-3" family="Galio" color={rgb(100,120,40)} size={10} />
+```
+
+Advanced examples:
+
+```jsx
+<Icon 
+  name="heart" 
+  family="antdesign" 
+  color="red" 
+  size={24}
+  style={{ marginRight: 8 }}
+/>
+
+<Icon 
+  name="check-circle" 
+  family="feather" 
+  color="success" 
+  size={20}
+  onPress={() => console.log('Icon pressed')}
+/>
+```
+
+### Props
+
+| Prop       | Type     | Default              | Description                                                                 |
+|------------|----------|----------------------|-----------------------------------------------------------------------------|
+| **name**   | string   | null                 | Icon name from Expo's icon library                                         |
+| **family** | string   | null                 | Icon family from Expo's icon library                                       |
+| **size**   | number   | `theme.SIZES.BASE`   | Icon size                                                                  |
+| **color**  | string   | `theme.COLORS.BLACK` | Icon color                                                                 |
+| **style**  | object   | null                 | Custom styles                                                              |
+| **onPress**| function | null                 | Press handler function                                                     |
+| **...TouchableOpacity.props** | - | - | All TouchableOpacity props are supported when onPress is provided |
+
+We're grateful to use the icon sets from **react-native-vector-icons**.  
+You can find the full list of icons they've prepared for React Native [here](https://oblador.github.io/react-native-vector-icons/).

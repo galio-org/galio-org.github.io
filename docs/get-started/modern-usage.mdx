@@ -1,0 +1,94 @@
+---
+title: "Modern Usage Patterns"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "Modern Usage",
+  "Modern Usage – Documentation"
+]
+source_url: "/docs/get-started/modern-usage"
+---
+
+## Modern Usage Patterns
+
+This guide covers modern Galio usage patterns, TypeScript support, and best practices.
+
+### TypeScript Support
+
+Galio provides full TypeScript support with proper type definitions.
+
+#### Basic TypeScript Usage
+
+```tsx
+import React, { useState } from 'react';
+import { Button, Input, Block, Text } from 'galio-framework';
+
+interface UserFormProps {
+  onSubmit: (data: UserData) => void;
+}
+
+const UserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  return (
+    <Block flex padding={20}>
+      <Input
+        placeholder="Name"
+        value={name}
+        onChangeText={setName}
+        color="primary"
+        rounded
+      />
+      <Button color="primary" onPress={() => onSubmit({ name, email })}>
+        Submit
+      </Button>
+    </Block>
+  );
+};
+```
+
+### Modern React Patterns
+
+#### Functional Components with Hooks
+
+```tsx
+import React, { useState, useEffect } from 'react';
+import { Block, Text, Button, Toast } from 'galio-framework';
+
+const Counter: React.FC = () => {
+  const [count, setCount] = useState(0);
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (count > 10) {
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    }
+  }, [count]);
+
+  return (
+    <Block flex center middle>
+      <Text h1>{count}</Text>
+      <Block row space="around">
+        <Button color="error" onPress={() => setCount(prev => prev - 1)}>
+          Decrease
+        </Button>
+        <Button color="success" onPress={() => setCount(prev => prev + 1)}>
+          Increase
+        </Button>
+      </Block>
+    </Block>
+  );
+};
+```
+
+### Best Practices
+
+1. **Use TypeScript** for better type safety
+2. **Prefer functional components** with hooks
+3. **Use proper prop types** and interfaces
+4. **Follow component composition** patterns
+5. **Use theme constants** consistently
+6. **Implement proper loading states**
+7. **Test your components** thoroughly
+8. **Optimize for performance** when needed

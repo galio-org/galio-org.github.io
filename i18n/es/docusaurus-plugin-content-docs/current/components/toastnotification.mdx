@@ -1,0 +1,67 @@
+---
+title: "Notificación Toast"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Notificación Toast",
+  "Notificación Toast – Documentación"
+]
+source_url: "/docs/components/toastnotification"
+---
+
+## Notificación Toast
+
+Las notificaciones toast son mensajes temporales que aparecen en la parte superior o inferior de la pantalla para mostrar información importante al usuario.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Toast } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+const [isShow, setShow] = useState(false);
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Toast
+  isShow={isShow}
+  positionIndicator="top"
+  color="success"
+  title="¡Éxito!"
+  message="Operación completada exitosamente"
+  duration={3000}
+  onHide={() => setShow(false)}
+/>
+
+<Toast
+  isShow={isShow}
+  positionIndicator="center"
+  color="error"
+  title="Error"
+  message="Algo salió mal"
+  showCloseButton
+  onClose={() => setShow(false)}
+/>
+```
+
+### Props
+
+| Prop                | Tipo       | Predeterminado | Descripción                                                                                         |
+| ------------------- | ---------- | -------------- | --------------------------------------------------------------------------------------------------- |
+| **isShow**          | bool       | false          | Controla la visibilidad del toast                                                                   |
+| **positionIndicator** | string  | 'top'          | Posición del toast: 'top', 'center', 'bottom'                                                      |
+| **color**           | string     | 'primary'      | Tema de color del toast                                                                             |
+| **title**           | string     | null           | Título del toast                                                                                     |
+| **message**         | string     | null           | Mensaje del toast                                                                                    |
+| **duration**        | number     | 3000           | Duración de auto-ocultación en milisegundos                                                         |
+| **showCloseButton** | bool       | false          | Muestra el botón de cerrar                                                                           |
+| **onHide**          | function   | null           | Callback cuando el toast se auto-oculta                                                              |
+| **onClose**         | function   | null           | Callback cuando se presiona el botón de cerrar                                                       |
+| **style**           | object     | null           | Estilos personalizados                                                                               |
+| **...View.props**   | -          | -              | Todas las props de React Native View son compatibles                                                |

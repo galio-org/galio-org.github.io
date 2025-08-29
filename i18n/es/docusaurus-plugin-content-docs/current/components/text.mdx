@@ -1,0 +1,79 @@
+---
+title: "Texto"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Texto",
+  "Texto – Documentación"
+]
+source_url: "/docs/components/text"
+---
+
+## Texto
+
+Nunca ha sido más fácil escribir y estilizar texto. Estamos usando una función auxiliar para normalizar el texto para que se vea bien en cualquier tipo de dispositivo.
+
+![Texto](/img/docs/text/text.png)
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Text } from 'galio-framework';
+```
+
+Ejemplos básicos:
+
+```jsx
+<Text h1>Título 1</Text>
+<Text h2>Título 2</Text>
+<Text h3>Título 3</Text>
+<Text h4>Título 4</Text>
+<Text h5>Título 5</Text>
+<Text p>Párrafo</Text>
+<Text muted>Este es un párrafo atenuado.</Text>
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Text 
+  h1 
+  color="primary" 
+  bold 
+  style={{ textAlign: 'center' }}
+>
+  Título con Estilo Personalizado
+</Text>
+
+<Text 
+  p 
+  muted 
+  italic 
+  size={18}
+  style={{ lineHeight: 24 }}
+>
+  Párrafo personalizado con estilos específicos
+</Text>
+```
+
+### Props
+
+| Prop      | Tipo    | Predeterminado | Descripción                                   |
+| --------- | ------- | -------------- | --------------------------------------------- |
+| **h1**    | bool    | false          | Establece el fontSize del texto a 44px       |
+| **h2**    | bool    | false          | Establece el fontSize del texto a 38px       |
+| **h3**    | bool    | false          | Establece el fontSize del texto a 30px       |
+| **h4**    | bool    | false          | Establece el fontSize del texto a 24px       |
+| **h5**    | bool    | false          | Establece el fontSize del texto a 18px       |
+| **p**     | bool    | false          | Establece el fontSize del texto a 16px       |
+| **size**  | number  | 0               | Establece el fontSize del texto              |
+| **color** | string  | null            | Establece el color del texto                 |
+| **muted** | bool    | false           | Cambia el color del texto a `theme.COLORS.MUTED` |
+| **bold**  | bool    | false           | Establece el fontWeight a 'bold'             |
+| **italic**| bool    | false           | Establece el fontStyle a 'italic'            |
+| **center**| bool    | false           | Centra el texto                               |
+| **left**  | bool    | false           | Alinea el texto a la izquierda               |
+| **right** | bool    | false           | Alinea el texto a la derecha                 |
+| **style** | object  | null            | Estilos personalizados                        |
+| **...Text.props** | - | - | Todas las props de React Native Text son compatibles |

@@ -1,0 +1,81 @@
+---
+title: "Card"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "Card",
+  "Card – Documentation"
+]
+source_url: "/docs/components/card"
+---
+
+## Card
+
+Card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+
+### Usage
+
+Imports:
+
+```jsx
+import { Card } from 'galio-framework';
+```
+
+Simple example:
+
+```jsx
+<Card
+  flex
+  borderless
+  style={styles.card}
+  title="Christopher Moon"
+  caption="139 minutes ago"
+  location="Los Angeles, CA"
+  avatar="http://i.pravatar.cc/100?id=skater"
+  imageStyle={styles.cardImageRadius}
+  imageBlockStyle={{ padding: theme.SIZES.BASE / 2 }}
+  image="https://images.unsplash.com/photo-1497802176320-541c8e8de98d?&w=1600&h=900&fit=crop&crop=entropy&q=300"
+/>
+```
+
+Advanced examples:
+
+```jsx
+<Card
+  flex
+  card
+  shadow
+  borderless
+  style={styles.card}
+  title="Custom Card"
+  caption="With custom styling"
+  titleStyle={{ color: 'primary' }}
+  captionStyle={{ color: 'muted' }}
+  footer={
+    <Block row space="between">
+      <Text size={12} color="muted">Footer content</Text>
+      <Button size="small" color="primary">Action</Button>
+    </Block>
+  }
+/>
+```
+
+### Props
+
+| Prop            | Type         | Default | Description                                                                                          |
+| --------------- | ------------ | ------- | ---------------------------------------------------------------------------------------------------- |
+| **children**    | node         | null    | Card content                                                                                          |
+| **card**        | bool         | true    | Adds card styling                                                                                     |
+| **shadow**      | bool         | true    | Adds shadow styling                                                                                   |
+| **borderless**  | bool         | false   | Removes card border                                                                                   |
+| **image**       | string       | null    | Image URL or path                                                                                     |
+| **imageStyle**  | object       | null    | Custom image styles                                                                                   |
+| **imageBlockStyle** | object   | null    | Styles for the image container                                                                        |
+| **title**       | string       | null    | Card title                                                                                            |
+| **titleStyle**  | object       | null    | Custom title styles                                                                                   |
+| **caption**     | string       | null    | Card caption                                                                                          |
+| **captionStyle**| object       | null    | Custom caption styles                                                                                 |
+| **location**    | string       | null    | Location text                                                                                         |
+| **avatar**      | string       | null    | Avatar image URL                                                                                      |
+| **footer**      | node         | null    | Footer content                                                                                        |
+| **style**       | object       | null    | Custom styles                                                                                         |
+| **...View.props**| -           | -       | All React Native View props are supported                                                             |

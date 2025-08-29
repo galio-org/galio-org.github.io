@@ -1,0 +1,137 @@
+---
+title: "GalioTheme"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "GalioTheme",
+  "GalioTheme – Documentación"
+]
+source_url: "/docs/get-started/galio-theme"
+---
+
+## Uso de GalioTheme
+
+Todos los colores, tamaños y reglas de diseño se almacenan en nuestro tema predeterminado. Esto se puede encontrar en la carpeta del tema dentro de nuestra biblioteca. Cada componente hereda sus reglas de estilo de ese archivo. Imagina esto... Estás construyendo una aplicación y tienes 30 botones usando el color primario, pero sientes que ese color realmente no se adapta a tu proyecto. Puedes reescribir nuestro archivo de tema con solo las cosas que quieres cambiar usando nuestros componentes de tema y todos los componentes Galio cambiarán ese estilo específico.
+
+### 1. Componentes
+
+- **GalioTheme**: tema predeterminado para componentes que exporta un objeto con { `COLORS`, `SIZES` }
+- **withGalio**: HoC para cualquier componente React-Native con argumentos: Componente y estilos opcionales. Al usar esto, puedes acceder a las constantes que tenemos en nuestro tema predeterminado.
+- **GalioProvider**: Proveedor de React Context que obtiene el tema personalizado de las props y lo pasa al React Context.
+
+### 2. Uso
+
+1. Instala la última versión de galio-framework usando npm install galio-framework o yarn add galio-framework
+
+2. Importa los componentes requeridos:
+
+```jsx
+import { theme, withGalio, GalioProvider } from 'galio-framework'
+```
+
+3. Exporta tu componente con withGalio:
+
+```jsx
+export default withGalio(TuComponente, estilosDelComponente);
+```
+
+4. Las constantes del tema personalizado sobrescribirán las constantes del tema Galio predeterminado
+
+```jsx
+const customTheme = {
+  SIZES: { BASE: 18, } 
+  // esto sobrescribirá el valor BASE de SIZES de Galio 16
+  COLORS: { PRIMARY: 'red', } 
+  // esto sobrescribirá el color PRIMARY de COLORS de Galio #B23AFC
+};
+ <GalioProvider theme={customTheme}>
+  <YourComponent />
+</GalioProvider>
+```
+
+#### 2.1 Uso detallado y explicación de withGalio
+
+Exportar una clase/función de React usando nuestra función withGalio permite que tu componente consuma el React Context de Galio y pase el tema en tu componente como una prop o como un argumento para los estilos. Así que ahora puedes usar nuestros colores y tamaños constantes en tus propios componentes/pantallas.
+
+```jsx
+const styles = theme => StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: theme.COLORS.FACEBOOK
+  }
+});
+export default withGalio(App, styles);
+```
+
+### 3. COLORES y TAMAÑOS del Tema
+
+Usa las siguientes tablas de referencia para crear tu propio tema personalizado
+
+**Tabla de referencia de COLORES**
+
+| Nombre del color | Valor predeterminado | Descripción |
+|------------------|----------------------|-------------|
+| **SOCIAL** | | |
+| FACEBOOK | #3B5998 | Para botón social de Facebook |
+| TWITTER | #5BC0DE | Para botón social de Twitter |
+| DRIBBBLE | #EA4C89 | Para botón social de Dribble |
+| **GALIO** | | |
+| THEME | #B23AFC | Color del tema predeterminado |
+| PRIMARY | #B23AFC | Color primario para Botones |
+| INFO | #1232FF | Color de información para Botones y Texto |
+| ERROR | #FE2472 | Color de error para mensajes de error |
+| WARNING | #FF9C09 | Color de advertencia para mensajes de advertencia |
+| SUCCESS | #45DF31 | Color de éxito para mensajes de éxito |
+| **COMPONENTES** | | |
+| INPUT | #808080 | Color de fondo del Input |
+| PLACEHOLDER | #9FA5AA | Color del texto del placeholder del Input |
+| NAVBAR | #F9F9F9 | Color del texto de la NavBar |
+| BLOCK | #808080 | Color del borde del Block |
+| ICON | #000000 | Color predeterminado del Icono |
+| **ESTÁNDAR** | | |
+| WHITE | #FFFFFF | Color blanco |
+| BLACK | #000000 | Color negro |
+| GREY | #898989 | Color gris |
+| MUTED | #9FA5AA | Color de texto atenuado |
+| TRANSPARENT | transparent | Valor transparente para Block, Button y otros componentes |
+| NEUTRAL | rgba(255,255,255, 0.65) | Color de texto neutro blanco con 65% de transparencia |
+
+### Tabla de referencia de TAMAÑOS
+
+```jsx
+const { height, width } = Dimensions.get('screen');
+```
+
+Por defecto se usa el tamaño de 16 para calcular todos los tamaños
+
+| Nombre del tamaño | Valor predeterminado |
+|-------------------|----------------------|
+| **TEMA** | |
+| BASE | 16 |
+| FONT | 16 |
+| ICON | 16 |
+| OPACITY | 0.8 |
+| BORDER_RADIUS | 6 |
+| BORDER_WIDTH | 0.8 |
+| **BOTÓN** | |
+| BUTTON_WIDTH | 16 * 9 |
+| BUTTON_HEIGHT | 16 * 2.75 |
+| BUTTON_SHADOW_RADIUS | 10 |
+| **BLOQUE** | |
+| BLOCK_SHADOW_OPACITY | 0.15 |
+| BLOCK_SHADOW_RADIUS | 8 |
+| ANDROID_ELEVATION | 1 |
+| **TARJETA** | |
+| CARD_BORDER_RADIUS | 16 * 0.4 |
+| CARD_BORDER_WIDTH | 16 * 0.05 |
+| CARD_WIDTH | width - (16 * 2) |
+| CARD_MARGIN_VERTICAL | 16 * 0.875 |
+| CARD_FOOTER_HORIZONTAL | 16 * 0.75 |
+| CARD_FOOTER_VERTICAL | 16 * 0.75 |
+| CARD_AVATAR_WIDTH | 16 * 2.5 |
+| CARD_AVATAR_HEIGHT | 16 * 2.5 |
+| CARD_AVATAR_RADIUS | 16 * 1.25 |
+| CARD_IMAGE_HEIGHT | 16 * 12.5 |
+| CARD_ROUND | 16 * 0.1875 |
+| CARD_ROUNDED | 16 * 0.5 |
+| **INPUT** | |
+| INPUT_BORDER_RADIUS | 16 * 0.5 |

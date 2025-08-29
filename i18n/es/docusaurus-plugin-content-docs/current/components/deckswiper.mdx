@@ -1,0 +1,75 @@
+---
+title: "Deslizador de Mazo"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Deslizador de Mazo",
+  "Deslizador de Mazo – Documentación"
+]
+source_url: "/docs/components/deckswiper"
+---
+
+## Deslizador de Mazo
+
+El componente DeckSwiper te permite crear una experiencia de deslizamiento de tarjetas similar a Tinder. Los usuarios pueden deslizar hacia la izquierda o derecha para navegar a través de un mazo de tarjetas.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { DeckSwiper, Block, Text, Button } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+const elements = [
+  {
+    id: 1,
+    title: "Tarjeta 1",
+    description: "Descripción de la tarjeta 1",
+    image: "https://example.com/image1.jpg"
+  },
+  {
+    id: 2,
+    title: "Tarjeta 2", 
+    description: "Descripción de la tarjeta 2",
+    image: "https://example.com/image2.jpg"
+  }
+];
+
+<DeckSwiper
+  components={elements}
+  onSwipeLeft={(index) => console.log('Deslizado a la izquierda en:', index)}
+  onSwipeRight={(index) => console.log('Deslizado a la derecha en:', index)}
+/>
+```
+
+Ejemplos avanzados:
+
+```jsx
+<DeckSwiper
+  components={elements}
+  onSwipeLeft={(index) => console.log('Deslizado a la izquierda en:', index)}
+  onSwipeRight={(index) => console.log('Deslizado a la derecha en:', index)}
+  onSwipeAll={(direction) => console.log('Todas las tarjetas deslizadas:', direction)}
+  style={{ height: 300 }}
+  cardStyle={{ borderRadius: 16 }}
+  cardElevation={8}
+/>
+```
+
+### Props
+
+| Prop                   | Tipo     | Predeterminado   | Descripción                                                                 |
+|------------------------|----------|------------------|-----------------------------------------------------------------------------|
+| **components**         | array    | null             | Array de componentes para renderizar en el mazo                            |
+| **onSwipeLeft**        | function | ()=>{}           | Callback cuando se desliza a la izquierda                                  |
+| **onSwipeRight**       | function | ()=>{}           | Callback cuando se desliza a la derecha                                    |
+| **onSwipeAll**         | function | ()=>{}           | Callback cuando se deslizan todas las tarjetas                             |
+| **style**              | object   | null             | Estilos del contenedor                                                     |
+| **cardStyle**          | object   | null             | Estilos de las tarjetas individuales                                       |
+| **cardElevation**      | number   | 4                | Elevación/sombra de la tarjeta                                             |
+| **swipeThreshold**     | number   | 120              | Distancia requerida para activar el deslizamiento                          |
+| **animationDuration**  | number   | 300              | Duración de la animación en milisegundos                                   |
+| **...View.props**      | -        | -                | Todas las props de React Native View son compatibles                       |

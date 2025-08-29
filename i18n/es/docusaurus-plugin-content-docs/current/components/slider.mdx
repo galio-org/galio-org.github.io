@@ -1,0 +1,69 @@
+---
+title: "Deslizador"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Deslizador",
+  "Deslizador – Documentación"
+]
+source_url: "/docs/components/slider"
+---
+
+## Deslizador
+
+Todos necesitamos un deslizador en nuestra aplicación. Este es un componente JavaScript construido con las APIs PanResponder y Animated.
+
+![Deslizador](/img/docs/slider/slider.png)
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Slider, Block } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+<Block flex>
+  <Slider
+    maximumValue={30}
+    value={10}
+    onSlidingComplete={() => this.registerTheValue()}
+  />
+</Block>
+```
+
+Uso moderno con hooks:
+
+```jsx
+const [sliderValue, setSliderValue] = useState(10);
+
+<Slider
+  value={sliderValue}
+  onValueChange={setSliderValue}
+  minimumValue={0}
+  maximumValue={100}
+  step={1}
+  activeColor="primary"
+  trackColor="grey"
+/>
+```
+
+### Props
+
+| Prop             | Tipo      | Predeterminado                        | Descripción                                                                                      |
+| ---------------- | --------- | -------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **value**        | number    | `0`                                    | El valor actual del deslizador                                                                   |
+| **onValueChange**| function  | null                                   | Callback cuando cambia el valor del deslizador                                                    |
+| **onSlidingComplete** | function | null                              | Callback cuando se completa el deslizamiento                                                     |
+| **activeColor**  | string    | `GalioTheme.COLORS.PRIMARY`            | Color de la pista activa                                                                         |
+| **trackColor**   | string    | `GalioTheme.COLORS.GREY`               | Color de la pista inactiva                                                                       |
+| **thumbColor**   | string    | `GalioTheme.COLORS.PRIMARY`            | Color del pulgar                                                                                 |
+| **disabled**     | bool      | `false`                                | Deshabilita el deslizador                                                                        |
+| **minimumValue** | number    | `0`                                    | Valor mínimo del deslizador                                                                      |
+| **maximumValue** | number    | `100`                                  | Valor máximo del deslizador                                                                      |
+| **step**         | number    | `1`                                    | Valor de incremento del paso                                                                     |
+| **trackStyle**   | object    | `{}`                                   | Estilos personalizados de la pista                                                               |
+| **thumbStyle**   | object    | `{}`                                   | Estilos personalizados del pulgar                                                                |
+| **style**        | object    | `{}`                                   | Estilos personalizados del contenedor                                                            |

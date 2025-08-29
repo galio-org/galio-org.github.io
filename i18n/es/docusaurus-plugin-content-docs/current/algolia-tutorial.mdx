@@ -1,0 +1,66 @@
+---
+id: algolia-tutorial
+title: Integración de Búsqueda Algolia
+sidebar_position: 4
+---
+
+# Integración de Búsqueda Algolia con la Documentación de Galio
+
+Este tutorial te guiará a través de la configuración de Algolia DocSearch para tu documentación de Galio impulsada por Docusaurus.
+
+Algolia DocSearch proporciona una experiencia de búsqueda potente y personalizable para el sitio web de tu documentación.
+
+## Requisitos Previos
+
+Antes de comenzar, asegúrate de tener:
+
+1.  Una cuenta de Algolia. Puedes registrarte para una cuenta gratuita de DocSearch si tu proyecto es de código abierto y está disponible públicamente.
+2.  Tu ID de Aplicación de Algolia, Clave de API de Búsqueda y Nombre de Índice (proporcionados por Algolia después de configurar DocSearch).
+
+## Paso 1: Configurar Docusaurus
+
+Abre tu archivo `docusaurus.config.ts` y localiza la sección `themeConfig`. Ya deberías tener un objeto `algolia`. Asegúrate de que esté configurado correctamente con tus credenciales de Algolia.
+
+```typescript:/docusaurus.config.ts
+themeConfig: {
+  algolia: {
+    appId: 'YOUR_ALGOLIA_APP_ID',
+    apiKey: 'YOUR_ALGOLIA_SEARCH_API_KEY',
+    indexName: 'YOUR_ALGOLIA_INDEX_NAME',
+    contextualSearch: true,
+    // Opcional: Especificar parámetros de búsqueda
+    searchParameters: {},
+    // Opcional: ruta para la página de búsqueda que Algolia usará para dirigir a los usuarios a una página de resultados de búsqueda
+    searchPagePath: 'search',
+    // Opcional: deshabilitar el seguimiento de insights
+    insights: false,
+  },
+  // ... otras opciones de themeConfig
+},
+```
+
+**Importante:** Reemplaza `YOUR_ALGOLIA_APP_ID`, `YOUR_ALGOLIA_SEARCH_API_KEY` y `YOUR_ALGOLIA_INDEX_NAME` con tus credenciales reales de Algolia.
+
+## Paso 2: Indexar tu Contenido
+
+Algolia DocSearch requiere un rastreador para indexar el contenido de tu documentación. Si solicitaste DocSearch, Algolia te proporcionará un archivo de configuración para su rastreador. Normalmente, no ejecutas este rastreador tú mismo; Algolia lo maneja por su parte basándose en la configuración proporcionada.
+
+Si estás auto-alojando el rastreador o usando un índice de Algolia diferente, necesitarías configurar y ejecutar el rastreador de Algolia DocSearch. Consulta la [documentación de Algolia DocSearch](https://docsearch.algolia.com/docs/indexing/) para obtener instrucciones detalladas sobre cómo configurar y ejecutar el rastreador.
+
+## Paso 3: Desplegar tu Documentación
+
+Después de configurar `docusaurus.config.ts` y asegurarte de que tu contenido esté indexado por Algolia, despliega tu sitio de Docusaurus. La barra de búsqueda debería aparecer y funcionar correctamente.
+
+```bash
+npm run build
+npm run serve # Para probar localmente
+# O desplegar en tu servicio de alojamiento
+```
+
+## Solución de Problemas
+
+*   **La barra de búsqueda no aparece:** Vuelve a verificar tu `docusaurus.config.ts` en busca de errores tipográficos en la configuración de `algolia`.
+*   **Los resultados de búsqueda están vacíos o son incorrectos:** Asegúrate de que tu rastreador de Algolia esté funcionando y esté indexando tu contenido correctamente. Revisa tu panel de control de Algolia para ver los registros del rastreador y el estado del índice.
+*   **Seguridad de la Clave de API:** La `apiKey` utilizada en `docusaurus.config.ts` es tu *Clave de API de Búsqueda*, que es segura de exponer públicamente. NO uses tu *Clave de API de Administración* en el código del lado del cliente.
+
+¡Siguiendo estos pasos, deberías tener la búsqueda de Algolia integrada exitosamente en tu documentación de Galio!

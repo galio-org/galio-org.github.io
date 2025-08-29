@@ -1,0 +1,85 @@
+---
+title: "Acordeón"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Acordeón",
+  "Acordeón – Documentación"
+]
+source_url: "/docs/components/accordion"
+---
+
+## Acordeón
+
+Este componente de acordeón hecho por Galio es fácilmente personalizable. Construido con Flatlist, esta lista expandible se puede usar para mostrar solo información relevante y ahorrar espacio en tu pantalla.
+
+![Acordeón](/img/docs/accordion/accordion.gif)
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Accordion } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+const data = [
+  { title: "1er Capítulo", content: "Lorem ipsum dolor sit amet" },
+  { title: "2do Capítulo", content: "Lorem ipsum dolor sit amet" },
+  { title: "3er Capítulo", content: "Lorem ipsum dolor sit amet" }
+];
+
+<Accordion dataArray={data} />
+```
+
+El array de datos se ve así:
+
+```jsx
+const data = [
+  { title: "1er Capítulo", content: "Lorem ipsum dolor sit amet" },
+  { title: "2do Capítulo", content: "Lorem ipsum dolor sit amet" },
+  { title: "3er Capítulo", content: "Lorem ipsum dolor sit amet" }
+];
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Accordion
+  dataArray={data}
+  opened={0}
+  icon="chevron-down"
+  iconFamily="feather"
+  iconSize={20}
+  iconColor="primary"
+  listStyle={{ backgroundColor: 'white' }}
+  style={{ margin: 16 }}
+/>
+
+<Accordion
+  dataArray={customData}
+  opened={-1}
+  customIcon={
+    <Icon name="plus" family="feather" size={16} color="primary" />
+  }
+  onToggle={(index) => console.log('Alternado:', index)}
+/>
+```
+
+### Props
+
+| Prop            | Tipo     | Predeterminado | Descripción                                                                                                     |
+|-----------------|----------|----------------|-----------------------------------------------------------------------------------------------------------------|
+| **dataArray**   | array    | null           | Array de objetos con claves: title, content, icon: { `name`, `family`, `size`, `color`, `style`}                          |
+| **opened**      | number   | -1             | Índice del elemento del acordeón inicialmente abierto                                                           |
+| **icon**        | string   | null           | Nombre del icono para elementos del acordeón                                                                   |
+| **iconFamily**  | string   | null           | Familia del icono para elementos del acordeón                                                                  |
+| **iconSize**    | number   | 16             | Tamaño del icono                                                                                               |
+| **iconColor**   | string   | null           | Color del icono                                                                                                |
+| **customIcon**  | component| null           | Componente de icono personalizado                                                                               |
+| **listStyle**   | object   | null           | Estilo de FlatList                                                                                              |
+| **style**       | object   | null           | Estilos del contenedor                                                                                          |
+| **onToggle**    | function | null           | Callback cuando se alterna un elemento del acordeón                                                            |
+| **...FlatList.props** | - | - | Todas las props de FlatList son compatibles                                                                   |

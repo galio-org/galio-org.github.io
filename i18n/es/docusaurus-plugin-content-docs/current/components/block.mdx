@@ -1,0 +1,72 @@
+---
+title: "Bloque"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Bloque",
+  "Bloque – Documentación"
+]
+source_url: "/docs/components/block"
+---
+
+## Bloque
+
+Este componente es el bloque principal usado para construir todo en Galio y cualquier tipo de diseño. Hay tantas props disponibles para un acceso más fácil a diferentes opciones de estilo que raramente escribirás otra prop de estilo.
+
+### Uso
+
+Importaciones:
+
+```jsx
+// import { Block } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+<Block>{children}</Block>
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Block 
+  flex 
+  row 
+  space="between" 
+  style={{ padding: 20 }}
+>
+  <Text>Contenido izquierdo</Text>
+  <Text>Contenido derecho</Text>
+</Block>
+
+<Block 
+  card 
+  shadow 
+  style={{ margin: 10 }}
+>
+  <Text>Contenido de la tarjeta</Text>
+</Block>
+```
+
+### Props
+
+| Prop          | Tipo         | Predeterminado | Descripción                                        |
+| ------------- | ------------ | -------------- | -------------------------------------------------- |
+| **children**  | node         | null           | Contenido del bloque                               |
+| **bottom**    | bool         | false          | alignItems: 'flex-end' alignSelf: 'flex-end'       |
+| **card**      | bool         | false          | Cambia el border-radius, -width y -color del View |
+| **center**    | bool         | false          | alignItems: 'center' alignSelf: 'center'           |
+| **flex**      | bool, number | false          | flex: 1 o `{tuNúmero}`                               |
+| **fluid**     | bool         | false          | width: 'auto'                                      |
+| **height**    | number       | null           | Cambia la altura del Bloque                        |
+| **left**      | bool         | false          | alignItems: 'flex-start'                           |
+| **middle**    | bool         | false          | alignItems: 'center' alignSelf: 'center'           |
+| **right**     | bool         | false          | alignItems: 'flex-end'                             |
+| **row**       | bool         | false          | flexDirection: 'row'                               |
+| **safe**      | bool         | false          | Envuelve el Bloque con un SafeAreaView            |
+| **shadow**    | bool         | false          | Agrega sombra en el Bloque                         |
+| **shadowColor**| string      | null           | Cambia el color de la sombra                       |
+| **space**     | string       | null           | Opciones: 'between', 'around' o 'evenly'          |
+| **style**     | object       | null           | Estilos personalizados                             |
+| **width**     | number       | null           | Cambia el ancho del Bloque                         |
+| **...View.props** | -      | -              | Todas las props de React Native View son compatibles |

@@ -1,0 +1,62 @@
+---
+title: "Icono"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Icono",
+  "Icono – Documentación"
+]
+source_url: "/docs/components/icon"
+---
+
+## Icono
+
+Los iconos se usan como indicadores visuales para describir una acción que el usuario podría tomar. Ese pequeño icono de Facebook nunca se vio mejor.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { Icon } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+<Icon name="pin-3" family="Galio" color={rgb(100,120,40)} size={10} />
+```
+
+Ejemplos avanzados:
+
+```jsx
+<Icon 
+  name="heart" 
+  family="antdesign" 
+  color="red" 
+  size={24}
+  style={{ marginRight: 8 }}
+/>
+
+<Icon 
+  name="check-circle" 
+  family="feather" 
+  color="success" 
+  size={20}
+  onPress={() => console.log('Icono presionado')}
+/>
+```
+
+### Props
+
+| Prop       | Tipo     | Predeterminado              | Descripción                                                                 |
+|------------|----------|-----------------------------|-----------------------------------------------------------------------------|
+| **name**   | string   | null                       | Nombre del icono de la biblioteca de iconos de Expo                        |
+| **family** | string   | null                       | Familia del icono de la biblioteca de iconos de Expo                       |
+| **size**   | number   | `theme.SIZES.BASE`         | Tamaño del icono                                                            |
+| **color**  | string   | `theme.COLORS.BLACK`       | Color del icono                                                             |
+| **style**  | object   | null                       | Estilos personalizados                                                     |
+| **onPress**| function | null                       | Función manejadora del evento de presión                                   |
+| **...TouchableOpacity.props** | - | - | Todas las props de TouchableOpacity son compatibles cuando se proporciona onPress |
+
+Estamos agradecidos de usar los conjuntos de iconos de **react-native-vector-icons**.  
+Puedes encontrar la lista completa de iconos que han preparado para React Native [aquí](https://oblador.github.io/react-native-vector-icons/).

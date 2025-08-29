@@ -1,0 +1,76 @@
+---
+title: "Barra de Navegación"
+description: "Framework React Native Gratuito y de Código Abierto"
+keywords: [
+  "Barra de Navegación",
+  "Barra de Navegación – Documentación"
+]
+source_url: "/docs/components/navbar"
+---
+
+## Barra de Navegación
+
+La barra de navegación es un componente que se usa para mostrar el título de la pantalla actual y opcionalmente botones de navegación.
+
+### Uso
+
+Importaciones:
+
+```jsx
+import { NavBar } from 'galio-framework';
+```
+
+Ejemplo simple:
+
+```jsx
+<NavBar title="Título de la Pantalla" />
+```
+
+Ejemplos avanzados:
+
+```jsx
+<NavBar
+  title="Barra de Navegación Personalizada"
+  back
+  onLeftPress={() => navigation.goBack()}
+  right={
+    <Button size="small" color="primary">
+      Acción
+    </Button>
+  }
+  transparent
+  titleStyle={{ color: 'white' }}
+/>
+
+<NavBar
+  title="Perfil"
+  left={
+    <Icon name="menu" family="feather" size={24} />
+  }
+  leftStyle={{ marginLeft: 16 }}
+  right={
+    <Block row>
+      <Icon name="search" family="feather" size={24} style={{ marginRight: 16 }} />
+      <Icon name="more-vertical" family="feather" size={24} />
+    </Block>
+  }
+  rightStyle={{ marginRight: 16 }}
+/>
+```
+
+### Props
+
+| Prop          | Tipo         | Predeterminado            | Descripción                                                  |
+| ------------- | ------------ | -------------------------- | ------------------------------------------------------------ |
+| **title**     | node, string | null                       | Título de la barra de navegación                             |
+| **titleStyle**| object       | null                       | Estilos personalizados del título                            |
+| **back**      | bool         | false                      | Muestra el botón de retroceso                               |
+| **onLeftPress**| function    | () => {}                   | Manejador del botón izquierdo                               |
+| **left**      | node         | null                       | Contenido personalizado del lado izquierdo                   |
+| **leftStyle** | object       | null                       | Estilos del contenedor del contenido izquierdo               |
+| **leftIconColor** | string   | `theme.COLORS.ICON`          | Color del icono izquierdo                                    |
+| **right**     | node         | null                       | Contenido personalizado del lado derecho                     |
+| **rightStyle**| object       | null                       | Estilos del contenedor del contenido derecho                 |
+| **transparent**| bool        | false                      | Fondo transparente                                           |
+| **style**     | object       | null                       | Estilos personalizados                                       |
+| **...View.props** | -      | -                          | Todas las props de React Native View son compatibles        |

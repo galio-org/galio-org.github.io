@@ -1,0 +1,47 @@
+{
+  "tutorialSidebar": [
+    "intro",
+    "README",
+    {
+      "type": "category",
+      "label": "Comenzar",
+      "collapsed": false,
+      "link": {
+        "type": "generated-index",
+        "description": "Aprende cómo instalar y configurar Galio Framework"
+      },
+      "items": [
+        "get-started/install",
+        "get-started/galio-theme",
+        "get-started/modern-usage"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Componentes",
+      "collapsed": false,
+      "link": {
+        "type": "doc",
+        "id": "components"
+      },
+      "items": [
+        "components",
+        "components/button",
+        "components/text",
+        "components/input",
+        "components/card",
+        "components/block",
+        "components/accordion",
+        "components/checkbox",
+        "components/radio",
+        "components/switch",
+        "components/slider",
+        "components/navbar",
+        "components/icon",
+        "components/toastnotification",
+        "components/deckswiper"
+      ]
+    },
+    "contributing"
+  ]
+} 

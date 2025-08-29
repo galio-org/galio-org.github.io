@@ -1,0 +1,137 @@
+---
+title: "GalioTheme"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "GalioTheme",
+  "GalioTheme – Documentation"
+]
+source_url: "/docs/get-started/galio-theme"
+---
+
+## GalioTheme usage
+
+All the colors, sizes and layout rules are stored in our default theme. This can be found in the theme folder inside our library. Every component inherits its styling rules from that file. Imagine this... You're building an application and you have 30 buttons using the primary color but you feel like that color doesn't really suit your project. You can re-write our theme file with only the things you want to change by using our theme components and all Galio components will change the that certain style.
+
+### 1. Components
+
+- **GalioTheme**: default theme for components exporting an object with { `COLORS`, `SIZES` }
+- **withGalio**: HoC for any React-Native component with args: Component and optional styles. By using this, you can access constants we have in our default theme.
+- **GalioProvider**: React Context Provider getting custom theme from props and pass it to the React Context.
+
+### 2. Usage
+
+1. Install the latest galio-framework using npm install galio-framework or yarn add galio-framework
+
+2. Import the required components:
+
+```jsx
+import { theme, withGalio, GalioProvider } from 'galio-framework'
+```
+
+3. Export your component with withGalio:
+
+```jsx
+export default withGalio(YourComponent, componentStyles);
+```
+
+4. Custom theme constants will overwrite the default galio theme constants
+
+```jsx
+const customTheme = {
+  SIZES: { BASE: 18, } 
+  // this will overwrite the Galio SIZES BASE value 16
+  COLORS: { PRIMARY: 'red', } 
+  // this will overwrite the Galio COLORS PRIMARY color #B23AFC
+};
+ <GalioProvider theme={customTheme}>
+  <YourComponent />
+</GalioProvider>
+```
+
+#### 2.1 withGalio in-depth usage and explanation
+
+Exporting a React class/function using our withGalio function enables your component to consume Galio's React Context and pass down theme in your component as a prop or as an argument for styles. So now you can use our constant colors and sizes in your own components/screens.
+
+```jsx
+const styles = theme => StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: theme.COLORS.FACEBOOK
+  }
+});
+export default withGalio(App, styles);
+```
+
+### 3. Theme COLORS & SIZES
+
+Use the following reference tables to create your own custom theme
+
+**COLORS reference table**
+
+| Color name | Default value | Description |
+|------------|---------------|-------------|
+| **SOCIAL** | | |
+| FACEBOOK | #3B5998 | For social Facebook button |
+| TWITTER | #5BC0DE | For social Twitter button |
+| DRIBBBLE | #EA4C89 | For social Dribble button |
+| **GALIO** | | |
+| THEME | #B23AFC | Theme default color |
+| PRIMARY | #B23AFC | Primary color for Buttons |
+| INFO | #1232FF | Info color for Buttons & Text |
+| ERROR | #FE2472 | Error color for error messages |
+| WARNING | #FF9C09 | Warning color for warning messages |
+| SUCCESS | #45DF31 | Success color for success messages |
+| **COMPONENTS** | | |
+| INPUT | #808080 | Input backgroundColor |
+| PLACEHOLDER | #9FA5AA | Input placeholder text color |
+| NAVBAR | #F9F9F9 | NavBar text color |
+| BLOCK | #808080 | Block border color |
+| ICON | #000000 | Icon default color |
+| **STANDARD** | | |
+| WHITE | #FFFFFF | White color |
+| BLACK | #000000 | Black color |
+| GREY | #898989 | Grey color |
+| MUTED | #9FA5AA | Text muted color |
+| TRANSPARENT | transparent | Transparent value for Block, Button and other components |
+| NEUTRAL | rgba(255,255,255, 0.65) | Text neutral color white with 65% transparency |
+
+### SIZES reference table
+
+```jsx
+const { height, width } = Dimensions.get('screen');
+```
+
+By default the size of 16 is used to calculate all the sizes
+
+| Size name | Default value |
+|-----------|---------------|
+| **THEME** | |
+| BASE | 16 |
+| FONT | 16 |
+| ICON | 16 |
+| OPACITY | 0.8 |
+| BORDER_RADIUS | 6 |
+| BORDER_WIDTH | 0.8 |
+| **BUTTON** | |
+| BUTTON_WIDTH | 16 * 9 |
+| BUTTON_HEIGHT | 16 * 2.75 |
+| BUTTON_SHADOW_RADIUS | 10 |
+| **BLOCK** | |
+| BLOCK_SHADOW_OPACITY | 0.15 |
+| BLOCK_SHADOW_RADIUS | 8 |
+| ANDROID_ELEVATION | 1 |
+| **CARD** | |
+| CARD_BORDER_RADIUS | 16 * 0.4 |
+| CARD_BORDER_WIDTH | 16 * 0.05 |
+| CARD_WIDTH | width - (16 * 2) |
+| CARD_MARGIN_VERTICAL | 16 * 0.875 |
+| CARD_FOOTER_HORIZONTAL | 16 * 0.75 |
+| CARD_FOOTER_VERTICAL | 16 * 0.75 |
+| CARD_AVATAR_WIDTH | 16 * 2.5 |
+| CARD_AVATAR_HEIGHT | 16 * 2.5 |
+| CARD_AVATAR_RADIUS | 16 * 1.25 |
+| CARD_IMAGE_HEIGHT | 16 * 12.5 |
+| CARD_ROUND | 16 * 0.1875 |
+| CARD_ROUNDED | 16 * 0.5 |
+| **INPUT** | |
+| INPUT_BORDER_RADIUS | 16 * 0.5 |

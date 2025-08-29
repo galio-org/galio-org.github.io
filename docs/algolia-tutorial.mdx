@@ -1,0 +1,66 @@
+---
+id: algolia-tutorial
+title: Algolia Search Integration
+sidebar_position: 4
+---
+
+# Integrating Algolia Search with Galio Documentation
+
+This tutorial will guide you through setting up Algolia DocSearch for your Docusaurus-powered Galio documentation.
+
+Algolia DocSearch provides a powerful and customizable search experience for your documentation website.
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+1.  An Algolia account. You can sign up for a free DocSearch account if your project is open-source and publicly available.
+2.  Your Algolia Application ID, Search API Key, and Index Name (provided by Algolia after setting up DocSearch).
+
+## Step 1: Configure Docusaurus
+
+Open your `docusaurus.config.ts` file and locate the `themeConfig` section. You should already have an `algolia` object. Ensure it's configured correctly with your Algolia credentials.
+
+```typescript:/docusaurus.config.ts
+themeConfig: {
+  algolia: {
+    appId: 'YOUR_ALGOLIA_APP_ID',
+    apiKey: 'YOUR_ALGOLIA_SEARCH_API_KEY',
+    indexName: 'YOUR_ALGOLIA_INDEX_NAME',
+    contextualSearch: true,
+    // Optional: Specify search parameters
+    searchParameters: {},
+    // Optional: path for search page that Algolia will use to direct users to a search results page
+    searchPagePath: 'search',
+    // Optional: disable insights tracking
+    insights: false,
+  },
+  // ... other themeConfig options
+},
+```
+
+**Important:** Replace `YOUR_ALGOLIA_APP_ID`, `YOUR_ALGOLIA_SEARCH_API_KEY`, and `YOUR_ALGOLIA_INDEX_NAME` with your actual Algolia credentials.
+
+## Step 2: Indexing Your Content
+
+Algolia DocSearch requires a crawler to index your documentation content. If you applied for DocSearch, Algolia will provide you with a configuration file for their crawler. You typically don't run this crawler yourself; Algolia handles it on their end based on your provided configuration.
+
+If you are self-hosting the crawler or using a different Algolia index, you would need to set up and run the Algolia DocSearch crawler. Refer to the [Algolia DocSearch documentation](https://docsearch.algolia.com/docs/indexing/) for detailed instructions on configuring and running the crawler.
+
+## Step 3: Deploy Your Documentation
+
+After configuring `docusaurus.config.ts` and ensuring your content is indexed by Algolia, deploy your Docusaurus site. The search bar should now appear and function correctly.
+
+```bash
+npm run build
+npm run serve # To test locally
+# Or deploy to your hosting service
+```
+
+## Troubleshooting
+
+*   **Search bar not appearing:** Double-check your `docusaurus.config.ts` for typos in the `algolia` configuration.
+*   **Search results are empty or incorrect:** Ensure your Algolia crawler is running and successfully indexing your content. Check your Algolia dashboard for crawler logs and index status.
+*   **API Key security:** The `apiKey` used in `docusaurus.config.ts` is your *Search API Key*, which is safe to expose publicly. Do NOT use your *Admin API Key* in client-side code.
+
+By following these steps, you should have Algolia search successfully integrated into your Galio documentation!

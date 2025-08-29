@@ -1,0 +1,76 @@
+---
+title: "Navbar"
+description: "Free and Open Source React Native Framework "
+keywords: [
+  "Navbar",
+  "Navbar – Documentation"
+]
+source_url: "/docs/components/navbar"
+---
+
+## NavBar
+
+A powerful navigation header, the navbar includes support for styling just the way you want it.
+
+### Usage
+
+Imports:
+
+```jsx
+import { NavBar } from 'galio-framework';
+```
+
+Simple example:
+
+```jsx
+<NavBar title="Screen Title" />
+```
+
+Advanced examples:
+
+```jsx
+<NavBar
+  title="Custom NavBar"
+  back
+  onLeftPress={() => navigation.goBack()}
+  right={
+    <Button size="small" color="primary">
+      Action
+    </Button>
+  }
+  transparent
+  titleStyle={{ color: 'white' }}
+/>
+
+<NavBar
+  title="Profile"
+  left={
+    <Icon name="menu" family="feather" size={24} />
+  }
+  leftStyle={{ marginLeft: 16 }}
+  right={
+    <Block row>
+      <Icon name="search" family="feather" size={24} style={{ marginRight: 16 }} />
+      <Icon name="more-vertical" family="feather" size={24} />
+    </Block>
+  }
+  rightStyle={{ marginRight: 16 }}
+/>
+```
+
+### Props
+
+| Prop          | Type         | Default            | Description                                                  |
+| ------------- | ------------ | ------------------ | ------------------------------------------------------------ |
+| **title**     | node, string | null               | NavBar title                                                 |
+| **titleStyle**| object       | null               | Custom title styles                                          |
+| **back**      | bool         | false              | Shows back button                                            |
+| **onLeftPress**| function    | () => {}           | Left button press handler                                    |
+| **left**      | node         | null               | Custom left content                                          |
+| **leftStyle** | object       | null               | Left content container styles                                |
+| **leftIconColor** | string   | `theme.COLORS.ICON`  | Left icon color                                              |
+| **right**     | node         | null               | Custom right content                                         |
+| **rightStyle**| object       | null               | Right content container styles                               |
+| **transparent**| bool        | false              | Transparent background                                       |
+| **style**     | object       | null               | Custom styles                                                |
+| **...View.props** | -      | -                  | All React Native View props are supported                    |
