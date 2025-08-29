@@ -1,5 +1,4 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
-import { mtConfig } from "@material-tailwind/react";
 
 
 /** @type {import('tailwindcss').Config} */
@@ -20,6 +19,5 @@ module.exports = {
         'github-stars-text-dark': 'linear-gradient(to right, #fff, #aaa)',
       },
     }
-  },
-  plugins: [mtConfig],
+  }
 };

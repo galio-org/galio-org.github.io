@@ -30,7 +30,7 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  trailingSlash: true,
+  trailingSlash: false,
 
 
   // Even if you don't use internationalization, you can use this field to set
