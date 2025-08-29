@@ -4,8 +4,8 @@
   <ShortName>Galio</ShortName>
   <Description>Search Galio</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://galio.io/es/img/galio.png</Image>
-  <Url type="text/html" method="get" template="https://galio.io/es/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://galio.io/es/opensearch.xml" />
-  <moz:SearchForm>https://galio.io/es/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://galio-org.github.io/es/img/galio.png</Image>
+  <Url type="text/html" method="get" template="https://galio-org.github.io/es/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://galio-org.github.io/es/opensearch.xml" />
+  <moz:SearchForm>https://galio-org.github.io/es/</moz:SearchForm>
 </OpenSearchDescription>
